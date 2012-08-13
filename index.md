@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Hello World!
-tagline: Supporting tagline
+title: 天外天
+tagline: 分享编程的点滴
 ---
 {% include JB/setup %}
 
