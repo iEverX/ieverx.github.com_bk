@@ -1,4 +1,6 @@
-.hll { background-color: #ffffcc }
+code { background-color: #ffffcc }
+pre { background-color: #ffffcc }
+.highlight { background-color: #ffffcc }
 .c { color: #408080; font-style: italic } /* Comment */
 .err { border: 1px solid #FF0000 } /* Error */
 .k { color: #008000; font-weight: bold } /* Keyword */
