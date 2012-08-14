@@ -12,7 +12,7 @@ markdown: rdiscount
 # so be sure to set them if your theme uses them.
 #
 title : 天外天
-address: EverCode.cn
+address: EverCode
 tagline: 分享编程的点滴
 author :
   name : Ever
