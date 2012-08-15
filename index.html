@@ -11,22 +11,43 @@ tagline: 分享编程的点滴
         {% for post in site.posts %}
             <div class="row">
                 <div class="span6">
-                <h3><a href="{{ BASE_PATH}}{{ post.url }}">{{ post.title }}</a></h3>
-                {{ post.tagline }}<br>
-                {{ post.content | truncatehtml: 500}}
+                    <h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+                        {% if post.tagline %} <small>{{ post.tagline }}</small>{% endif %}</h2>
                 </div>
-                <div class="span2">{{ post.date | date_to_string }}</div>
+                <div class="span2"><strong>{{ post.date | date_to_string }}</strong></div>
             </div>
+            {% capture posturl %}<a href={{ BASE_PATH }}{{ post.url }}>Read more...</a>{% endcapture %}
+            {{ post.content | truncatehtml: 800, "  ", posturl }}
             <hr>
         {% endfor %}
     </div>
 
     <div class="span4">
+        {% unless site.posts == empty %}
         <h3>Recent Posts</h3>
         <ul>
         {% for post in site.posts limit: 10 %}
             <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">
                 {{post.title }}</a></li>
         {% endfor %}
+        </ul>
+        {% endunless %}
+
+        {% unless site.categories == empty %}
+        <h3>Categories</h3>
+        <ul class="tag_box">
+        {% assign categories_list = site.categories %}
+        {% include JB/categories_list %}
+        </ul>
+        {% endunless %}
+
+        {% unless site.tags == empty %}
+        <h3>Tags</h3>
+        <ul class="inline tag_box">
+        {% assign tags_list = site.tags %}
+        {% include JB/tags_list %}
+        </ul>
+        {% endunless %}
+
     </div>
 </div>

@@ -5,7 +5,7 @@ require 'nokogiri'
 module Liquid
   module StandardFilters
     
-    def truncatehtml(raw, max_length = 15, continuation_string = "...")
+    def truncatehtml(raw, max_length = 15, continuation = "...", link="...")
      doc = Nokogiri::HTML(Iconv.conv('UTF8//TRANSLIT//IGNORE', 'UTF8', raw)) 
       current_length = 0;
       deleting = false
@@ -25,13 +25,17 @@ module Liquid
           deleting = true
           
           trim_to_length = current_length - max_length + 1
-          node.content = node.text[0..trim_to_length] + continuation_string
+          node.content = node.text[0..trim_to_length] + continuation
         end
       end
   
       to_delete.map(&:remove)
   
-      doc.inner_html
+      if deleting
+          doc.inner_html + link
+      else
+          doc.inner_html
+      end
     end
     
   private
