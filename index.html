@@ -18,6 +18,7 @@ tagline: 分享编程的点滴
             </div>
             {% capture posturl %}<a href={{ BASE_PATH }}{{ post.url }}>Read more...</a>{% endcapture %}
             {{ post.content | truncatehtml: 800, "  ", posturl }}
+            <a href="#page-top" style="float:right">Top</a>
             <hr>
         {% endfor %}
     </div>
