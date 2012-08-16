@@ -8,7 +8,7 @@ tagline: 分享编程的点滴
 <div class="row">
 
     <div class="span8">
-        {% for post in site.posts %}
+        {% for post in paginator.posts %}
             <div class="row">
                 <div class="span6">
                     <h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
@@ -21,8 +21,8 @@ tagline: 分享编程的点滴
             <a href="#page-top" style="float:right">Top</a>
             <hr>
         {% endfor %}
+    {% include ever/pagination %}
     </div>
-
     <div class="span4">
         {% unless site.posts == empty %}
         <h3>Recent Posts</h3>
