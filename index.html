@@ -12,7 +12,7 @@ tagline: 分享编程的点滴
             <div class="row">
                 <div class="span6">
                     <h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-                        {% if post.tagline %} <small>{{ post.tagline }}</small>{% endif %}</h2>
+                        {% if post.tagline %}<br><small>{{ post.tagline }}</small>{% endif %}</h2>
                 </div>
                 <div class="span2"><strong>{{ post.date | date: "%Y-%m-%d" }}</strong></div>
             </div>
