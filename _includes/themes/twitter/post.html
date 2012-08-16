@@ -6,6 +6,8 @@
   <div class="span8">
     {{ content }}
     <hr>
+    {% assign post = page %}
+    {% include ever/post_end %}
     <div class="pagination">
       <ul>
       {% if page.previous %}
