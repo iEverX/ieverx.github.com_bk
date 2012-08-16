@@ -14,7 +14,7 @@ tagline: 分享编程的点滴
                     <h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
                         {% if post.tagline %} <small>{{ post.tagline }}</small>{% endif %}</h2>
                 </div>
-                <div class="span2"><strong>{{ post.date | date_to_string }}</strong></div>
+                <div class="span2"><strong>{{ post.date | date: "%Y-%m-%d" }}</strong></div>
             </div>
             {% capture posturl %}<a href={{ BASE_PATH }}{{ post.url }}>Read more...</a>{% endcapture %}
             {{ post.content | truncatehtml: 800, "  ", posturl }}
@@ -28,7 +28,7 @@ tagline: 分享编程的点滴
         <h3>Recent Posts</h3>
         <ul>
         {% for post in site.posts limit: 10 %}
-            <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">
+            <li><span>{{ post.date | date: "%Y-%m-%d" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">
                 {{post.title }}</a></li>
         {% endfor %}
         </ul>

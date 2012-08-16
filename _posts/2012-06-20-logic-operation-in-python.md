@@ -4,7 +4,7 @@ title: "Python的逻辑运算"
 tagline: "Logic Operation In Python"
 description: "Python中的逻辑运算的规定以及实质"
 category: "Python"
-tags: ["Python", "逻辑"]
+tags: ["Python", "语义"]
 ---
 {% include JB/setup %}
 

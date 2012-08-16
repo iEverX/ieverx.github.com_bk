@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "编译 Linux 内核"
+title: "编译Linux内核"
 tagline: "Compiling Linux Kernel"
-description: "Linux 内核编译的步骤以及一些相关问题的解决办法"
+description: "Linux内核编译的步骤以及一些相关问题的解决办法"
 category: "Linux"
 tags: ["Linux", "内核", "编译源码"]
 ---
