@@ -25,7 +25,7 @@ tags: ["总结", "反思", "暑假"]
 
 1. 数据库在暑假前几天看了一些，《[数据库系统概念][]》，很经典的书，呵呵。第四章没看到，就再没看过
 1. 算法导论看到了栈和队列，还有好多部分是在暑假之前看的。之后也撂下了
-1. C++的书，看了些《[范型编程与STL][]》，不过这不是我之前要干的事情。我想的是强化基础，看这个完全是临时起意
+1. C++的书，看了些《[泛型编程与STL][]》，不过这不是我之前要干的事情。我想的是强化基础，看这个完全是临时起意
 1. 博客，除了一篇关于Linux内核编译的，再没写过一篇，而且那篇由于那是实验室给了个编译内核的任务。这个博客是在[这里][]
 1. Android开发，只会一些最基本的东西。完全没有能力做出一个App来。管我们这组的师兄估计要哭了
 1. Linux内核方面，《[Linxu内核设计与实现][]》看到了中断的下半部（bottom half），之后就没看了，现在也忘的差不多了
@@ -53,7 +53,7 @@ tags: ["总结", "反思", "暑假"]
 
 [这里]: http://everax.sinaapp.com
 [数据库系统概念]: http://product.china-pub.com/32560
-[范型编程与STL]: http://product.china-pub.com/9864
+[泛型编程与STL]: http://product.china-pub.com/9864
 [Linxu内核设计与实现]: http://www.amazon.cn/Linux%E5%86%85%E6%A0%B8%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0-%E6%8B%89%E8%8A%99/dp/B004X3Z3D4
 [Real World Haskell]: http://book.realworldhaskell.org/read/
 [一个Todo应用]: https://github.com/iEverX/evertodo
