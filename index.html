@@ -2,6 +2,13 @@
 layout: page
 title: 天外天
 tagline: 分享编程的点滴
+links:
+  - url: "http://everax.sinaapp.com"
+    name: "我的另一个博客"
+  - url: "http://suneony.sinaapp.com"
+    name: "suneony | win"
+  - url: "http://weibo.com/ieverx"
+    name: "我的新浪微博"
 ---
 {% include JB/setup %}
 
@@ -27,8 +34,8 @@ tagline: 分享编程的点滴
         <wb:follow-button uid="2461544952" type="red_1" width="63" height="24" ></wb:follow-button>
         <span style="padding-left: 40px">
             <a href="http://fusion.google.com/add?feedurl=http://evercoding.net/atom.xml" rel="nonfollow" title="订阅到Google" target="_blank"><img src="static/img/rss.jpg" height="24" /></a></span>
-        <hr>
         {% unless site.posts == empty %}
+        <hr>
         <h3>Recent Posts</h3>
         <ul>
         {% for post in site.posts limit: 10 %}
@@ -37,24 +44,31 @@ tagline: 分享编程的点滴
         {% endfor %}
         </ul>
         {% endunless %}
-        <hr>
 
         {% unless site.categories == empty %}
+        <hr>
         <h3>Categories</h3>
         <ul class="tag_box">
         {% assign categories_list = site.categories %}
         {% include JB/categories_list %}
         </ul>
         {% endunless %}
-        <hr>
 
         {% unless site.tags == empty %}
+        <hr>
         <h3>Tags</h3>
         <ul class="inline tag_box">
         {% assign tags_list = site.tags %}
         {% include JB/tags_list %}
         </ul>
         {% endunless %}
+
+        {% if page.links %}
+        <hr>
+        <h3>Friend Links</h3>
+        {% assign links = page.links %}
+        {% include ever/links %}
+        {% endif %}
 
     </div>
 </div>

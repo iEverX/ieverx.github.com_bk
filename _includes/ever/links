@@ -1,0 +1,3 @@
+{% for link in links %}
+    <li><a href={{ link.url }} title={% if link.title %}{{ link.title }}{% else %}{{ link.name }}{% endif %}>{{ link.name }}</a></li>
+{% endfor %}
