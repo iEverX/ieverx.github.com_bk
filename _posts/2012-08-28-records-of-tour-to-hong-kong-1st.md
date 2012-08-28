@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "香港游小记（一）"
+title: "香港游小记一"
 tagline: "Records Of Tour To Hong Kong 1st"
 description: "2012年暑假，随访学团赴香港的一些记述"
 category: "游记"
