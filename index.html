@@ -23,7 +23,7 @@ links:
                 </div>
                 <div class="span2"><strong>{{ post.date | date: "%Y-%m-%d" }}</strong></div>
             </div>
-            {% capture posturl %}<a href={{ BASE_PATH }}{{ post.url }} rel="nonfollow">Read more...</a>{% endcapture %}
+            {% capture posturl %}<a href={{ BASE_PATH }}{{ post.url }} rel="nofollow">Read more...</a>{% endcapture %}
             {{ post.content | truncatehtml: 800, "  ", posturl }}
             <a href="#page-top" style="float:right">Top</a>
             <hr>
