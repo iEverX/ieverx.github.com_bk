@@ -95,4 +95,4 @@ def send_mail(mail_from, mail_to_list, subject, content):
 
 嗯，这篇文章几乎都是代码，就当是自己的备忘录好了。。
 
-[这里]: http://example.com
+[这里]: http://michaelliao.github.com/sinaweibopy/
