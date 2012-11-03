@@ -62,7 +62,7 @@ task :post do
     post.puts "---"
     post.puts "layout: post"
     post.puts 'title: ""'
-    post.puts "tagline: \"#{tagline.gsub(/-/,' ')}\""
+    post.puts "tagline: \"#{tagline.gsub(/-/,' ').gsub(/\b\w/) {$&.upcase}}\""
     post.puts 'description: ""'
     post.puts "category: "
     post.puts "tags: []"
