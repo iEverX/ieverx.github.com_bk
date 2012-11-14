@@ -34,15 +34,18 @@
         <div class="container">
           <a class="brand" href="{{ HOME_PATH }}">{{ site.address }}</a>
           <ul class="nav">
-            {% assign pages_list = site.pages %}
-            {% assign group = 'navigation' %}
-            {% include JB/pages_list %}
-          </ul>
+            <!-- {% assign pages_list = site.pages %} -->
+            <!-- {% assign group = 'navigation' %} -->
+            <!-- {% include JB/pages_list %} -->
+            <li><a href="/archive.html">Archives</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/messages.html">Messages</a></li>
+        </ul>
         <ul><li>
         <form class="navbar-search pull-right" method="get" action="http://www.google.com/search" target="google_window">
             <label for="g_search" class="hidden"></label>
             <input id="g_search" type="text" class="search-query" placeholder="Search..." name="q" />
-            <input type="submit" name=”btnG” style="display:none" id="searchsubmit" value="Search" />
+            <input type="submit" name="btnG" style="display:none" id="searchsubmit" value="Search" />
             <input type="hidden" name="ie" value="UTF-8" />
             <input type="hidden" name="oe" value="UTF-8" />
             <input type="hidden" name="hl" value="zh-CN" />
