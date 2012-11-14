@@ -8,15 +8,15 @@ A static blog built with [Jekyll-BootStrap][] on github pages
 
 * Home page shows rencent post, categories and tags
 * Home page pagination and go to top of page
-* RSS subscribe, with source code from [Skydark's blog][]
+* RSS subscribe and site search, with source code from [Skydark's blog][]
 * Sina Weibo pay-attention button
 * Abstract of posts in home page (it cannot be seen in github for its plugin-disabled)
 * Declaration at end of each post
 * My personal-like style
+* Friend Links
 
 ## Function that will be realized
 
-* Friend Links
 * The post with most comments
 * The latest comments
 * Any others
