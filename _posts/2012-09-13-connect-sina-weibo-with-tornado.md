@@ -12,7 +12,7 @@ tags: ["Python", "Web开发", "Tornado", "微博"]
 
 微博的API就是微博官网上的那个新的API，可以从[这里][]下载。网上有很多的教程，不过用的都是原来的API，不过也可以参照。不多说了，直接贴代码，不过这是简写的，不过可以连接到微博了。
 
-{% highlight python linenos %}
+<pre class="brush: python">
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -58,12 +58,12 @@ if __name__ == '__main__':
     app.listen(9009)
     tornado.ioloop.IOLoop.instance().start()
 
-{% endhighlight %}
+</pre>
 
 我的应用的源码在这里<http://github.com/iEverX/webotxyz>，不过我的应用不可能上线的了，因为抓取数据存到邮箱了。。
 
 下面是我在里面用到的一段Python发送邮件的代码，比较短，可以充分的看出Python的简洁
-{% highlight python linenos %}
+<pre class="brush: python">
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -91,7 +91,7 @@ def send_mail(mail_from, mail_to_list, subject, content):
     except:
         return false
     return True
-{% endhighlight %}
+</pre>
 
 嗯，这篇文章几乎都是代码，就当是自己的备忘录好了。。
 
