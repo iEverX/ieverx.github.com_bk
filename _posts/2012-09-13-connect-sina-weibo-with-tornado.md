@@ -73,7 +73,7 @@ from email.mime.multipart import MIMEMultipart
 
 def send_mail(mail_from, mail_to_list, subject, content):
     from_format = 'Ever' + '<' + mail_from + '>'
-    # 格式应该是这样的 Nickname<username@host.address>
+    # 格式应该是这样的 Nickname< username@host.address>，中间无空格
     txt = MIMEText(content, 'html') # 若content中有html编码
     # txt = MIMEText(content) # 若content中没有html编码
     txt.set_charset('utf-8')
