@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "忙&累"
+title: "忙&amp;累"
 tagline: "Busy And Tired"
 description: ""
 category: "个人"
