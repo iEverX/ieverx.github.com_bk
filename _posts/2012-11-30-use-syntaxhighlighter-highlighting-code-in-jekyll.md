@@ -51,7 +51,7 @@ tags: ["Jekyll", "SyntaxHighlighter"]
 </pre>
 </pre>
 
-效果就和以上一样了。这个应该比pygments更好看把
+效果就和以上一样了。这个应该比pygments更好看吧。不过目前
 
 
 [SyntaxHighlighter]: http://alexgorbatchev.com/SyntaxHighlighter/
