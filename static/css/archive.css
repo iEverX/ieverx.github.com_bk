@@ -1,0 +1,5 @@
+ul.tab {margin: 0; }
+.tab li { display: inline; color: green; font-size: 20px; padding: 10px 20px 10px 0;}
+.tab li:hover {cursor: pointer; text-decoration: underline; }
+.tabx {padding: 0;}
+.showing { font-weight: bold;}

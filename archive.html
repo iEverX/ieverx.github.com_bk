@@ -6,5 +6,32 @@ group: navigation
 ---
 {% include JB/setup %}
 
+<link rel="stylesheet" href="/static/css/archive.css">
+
 {% assign posts_collate = site.posts %}
 {% include JB/posts_collate %}
+
+<script type="text/javascript">
+    $(function() {
+    var $tab = $('<ul class="tab"></ul>');
+    var $tabx = $('<div class="tabx"></div>');
+    $('h2').each(function(index) {
+        $('<li></li>').append($(this).text()).appendTo($tab); 
+        $('<div id="tab-' + index + '"></div>')
+        .append($(this).nextUntil('h2'))
+        .appendTo($tabx);
+        $(this).nextUntil('h2').remove();
+    }).remove();
+    $('.span12').prepend($tab).append($tabx);
+    $tabx.children().hide();
+    $('div#tab-0').show();
+    $tab.children().first().addClass('showing');
+    $tab.children().each(function(index) {
+        $(this).click(function() {
+            $tabx.children().hide();
+            $('div#tab-' + index).show();
+            $(this).addClass('showing').siblings().removeClass('showing');
+        });
+    });
+});
+</script>
