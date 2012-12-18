@@ -69,10 +69,11 @@
 
       <footer>
         {% assign now_year = 'now' | date: "%Y" %}
-        <p>&copy; {{ site.author.name }} {{ site.start_year }} {% if now_year != site.start_year %} - {{ now_year }} {% assign now_year = nil %} {% endif %}
+        <p>&copy; {{ site.author.name }} {{ site.start_year }} {% if now_year != site.start_year %} - {{ now_year }} {% endif %}
           with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
         </p>
+        {% assign now_year = nil %}
       </footer>
 
     </div> <!-- /container -->
