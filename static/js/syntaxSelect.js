@@ -24,7 +24,6 @@ $(function () {
     if ($t.length > 0) {
         $('body').append('<script src="/static/js/syntaxhighlighter/shCore.js" type="text/javascript"></script>');
     }
-    alert($('script'));
     $t.each(function() {
         var lang = stdname[$.trim($(this).attr('class').substring(6))];
         $('body').append('<script type="text/javascript" src="/static/js/syntaxhighlighter/shBrush' + lang + '.js"></script>');
@@ -32,5 +31,4 @@ $(function () {
     if ($t.length > 0) {
         $('body').append('<script language="javascript">SyntaxHighlighter.all();</script>');
     }
-    alert($('script'));
 });
