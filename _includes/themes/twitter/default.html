@@ -68,12 +68,16 @@
       </div>
 
       <footer>
-        {% assign now_year = 'now' | date: "%Y" %}
-        <p>&copy; {{ site.author.name }} {{ site.start_year }} {% if now_year != site.start_year %} - {{ now_year }} {% endif %}
+        <p>&copy; {{ site.author.name }} 2012 <span id="now_year"></span>
           with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
         </p>
-        {% assign now_year = nil %}
+        <script type="text/javascript">
+          var now_year = new Date().getFullYear();
+          if (now_year != 2011) {
+              $('#now_year').html('- ' + now_year);
+          }
+        </script>
       </footer>
 
     </div> <!-- /container -->
