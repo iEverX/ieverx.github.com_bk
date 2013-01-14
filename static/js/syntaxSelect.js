@@ -1,6 +1,6 @@
 $(function () {
 
-    stdname = {
+    var stdname = {
         'bash': 'Bash',
         'sh': 'Bash',
         'c': 'Cpp',
@@ -20,12 +20,18 @@ $(function () {
         'perl': 'Perl'
     };
 
+    var used = {};
+
     var $t = $('pre[class^=brush]');
     if ($t.length > 0) {
         $('body').append('<script src="/static/js/syntaxhighlighter/shCore.js" type="text/javascript"></script>');
     }
     $t.each(function() {
         var lang = stdname[$.trim($(this).attr('class').substring(6))];
+        if (used[lang]) {
+            return;
+        }
+        used[lang] = true;
         $('body').append('<script type="text/javascript" src="/static/js/syntaxhighlighter/shBrush' + lang + '.js"></script>');
     });
     if ($t.length > 0) {
