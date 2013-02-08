@@ -32,7 +32,9 @@ $(function () {
             return;
         }
         used[lang] = true;
-        $('body').append('<script type="text/javascript" src="/static/js/syntaxhighlighter/shBrush' + lang + '.js"></script>');
+        var scr = '<script type="text/javascript" src="/static/js/syntaxhighlighter/shBrush' + lang + '.js"></script>'
+        alert(scr);
+        $('body').append(scr);
     });
     if ($t.length > 0) {
         $('body').append('<script language="javascript">SyntaxHighlighter.all();</script>');
