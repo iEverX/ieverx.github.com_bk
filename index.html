@@ -23,13 +23,16 @@ links:
 
     <div class="span8">
         {% for post in paginator.posts %}
+        <h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
             <div class="row">
-                <div class="span6">
-                    <h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
+                <div class="span3">
+                    Published At: <strong>{{ post.date | date: "%Y-%m-%d" }}</strong>
                 </div>
-                <div class="span2"><strong>{{ post.date | date: "%Y-%m-%d" }}</strong></div>
+                <div class="span5">
+                    <a href="{{ BASE_PATH }}{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}"></a>
+                </div>
             </div>
-            {% capture posturl %}<a href={{ BASE_PATH }}{{ post.url }} rel="nofollow">Read more...</a>{% endcapture %}
+            {% capture posturl %}<a href="{{ BASE_PATH }}{{ post.url }}" rel="nofollow">Read more...</a>{% endcapture %}
             {{ post.content | truncatehtml: 800, "  ", posturl }}
             <a href="#page-top" style="float:right">Top</a>
             <hr>

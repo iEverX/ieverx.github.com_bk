@@ -62,19 +62,18 @@
     </div>
 
     <div class="container">
-
       <div class="content">
         {{ content }}
       </div>
 
       <footer>
-        <p>&copy; {{ site.author.name }} 2012 <span id="now_year"></span>
+        <p>&copy; {{ site.author.name }} {{ site.start_year }} <span id="now_year"></span>
           with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
         </p>
         <script type="text/javascript">
           var now_year = new Date().getFullYear();
-          if (now_year != 2012) {
+          if (now_year != {{ site.start_year }}) {
               $('#now_year').html('- ' + now_year);
           }
         </script>
@@ -87,5 +86,16 @@
 
 
     <script type="text/javascript" src="/static/js/syntaxSelect.js"></script>
+
+    <script type="text/javascript" src="/static/js/disqus/count_each_page.js">
+      var disqus_shortname = '{{ site.JB.comments.disqus.short_name }}'; 
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function () {
+          var s = document.createElement('script'); s.async = true;
+          s.type = 'text/javascript';
+          s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+    </script>
   </body>
 </html>
