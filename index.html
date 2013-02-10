@@ -34,6 +34,7 @@ links:
             </div>
             {% capture posturl %}<a href="{{ BASE_PATH }}{{ post.url }}" rel="nofollow">Read more...</a>{% endcapture %}
             {{ post.content | truncatehtml: 800, "  ", posturl }}
+            {% include ever/category_tags_list %}
             <a href="#page-top" style="float:right">Top</a>
             <hr>
         {% endfor %}

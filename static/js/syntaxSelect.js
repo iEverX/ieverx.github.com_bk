@@ -33,7 +33,6 @@ $(function () {
         }
         used[lang] = true;
         var scr = '<script type="text/javascript" src="/static/js/syntaxhighlighter/shBrush' + lang + '.js"></script>'
-        alert(scr);
         $('body').append(scr);
     });
     if ($t.length > 0) {
