@@ -2,16 +2,11 @@
    <span id="bshare-shareto">分享到</span>
 
    <a title="新浪微博" class="bshare-sinaminiblog"></a>
+   <a title="腾讯微博" class="bshare-qqmb"></a>
    <a title="人人网" class="bshare-renren"></a>
-   <a title="网易微博" class="bshare-neteasemb"></a>
-   <a title="豆瓣" class="bshare-douban"></a>
-   <a title="Delicious" class="bshare-delicious"></a>
-   <a title="Google书签" class="bshare-bgoogle"></a>
-   <a title="百度搜藏" class="bshare-baiducang"></a>
-   <a title="Evernote" class="bshare-evernote"></a>
 
    <a title="更多平台" id="bshare-more-icon" class="bshare-more"></a>
    <span class="BSHARE_COUNT bshare-share-count">--</span>
 </div>
-<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=<你的UUID>&style=-1"></script>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=5a2a17c9-1a8e-4f45-a3f7-3c7c5600efda&style=-1"></script>
 <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC2.js"></script>
