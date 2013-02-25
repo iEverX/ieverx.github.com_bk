@@ -36,6 +36,6 @@ $(function () {
         $('body').append(scr);
     });
     if ($t.length > 0) {
-        $('body').append('<script language="javascript">SyntaxHighlighter.all();</script>');
+        $('body').append('<script language="javascript">SyntaxHighlighter.defaults["toolbar"]=false;SyntaxHighlighter.all();</script>');
     }
 });
