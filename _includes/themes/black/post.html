@@ -1,0 +1,78 @@
+<div class="page-header">
+  <h1>{{ page.title }} {% if page.tagline %}<br><small>{{ page.tagline}}</small>{% endif %}</h1>
+</div>
+
+<div class="row page-body">
+  <div class="span9">
+    <div class="main-container">
+      <div class="mainbody">
+        {{ content }}
+      </div>
+    </div>
+    
+    <div class="main-container">
+      <div class="mainbody">
+        {% include ever/share %}
+        {% assign post = page %}
+        {% include ever/post_end %}
+        <hr>
+        <div class="pagination">
+          <ul>
+          {% if page.previous %}
+            <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
+          {% else %}
+            <li class="prev disabled"><a>&larr; Previous</a></li>
+          {% endif %}
+            <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
+          {% if page.next %}
+            <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+          {% else %}
+            <li class="next disabled"><a>Next &rarr;</a>
+          {% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <div class="mainbody">
+        {% include JB/comments %}
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="span3">
+    <div class="side-container">
+      <div class="sidebar">
+        <h4>Published</h4>
+        <div class="date"><span>{{ page.date | date: "%Y-%m-%d" }}</span></div>
+      </div>
+    </div>
+    
+
+    <div class="side-container">
+      <div class="sidebar">
+        {% if page.category %}
+          <h4>Category</h4>
+          <ul class="tag_box">
+          {% assign categories_list = page.category %}
+          {% include JB/categories_list %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="side-container">
+      <div class="sidebar">
+        {% unless page.tags == empty %}
+          <h4>Tags</h4>
+          <ul class="tag_box">
+          {% assign tags_list = page.tags %}
+          {% include JB/tags_list %}
+          </ul>
+        {% endunless %}        
+      </div>
+    </div>
+  </div>
+</div>

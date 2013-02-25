@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: index
 title: 天外天
 tagline: 分享编程的点滴
 links:
@@ -19,67 +19,95 @@ links:
 ---
 {% include JB/setup %}
 
-<div class="row">
-
-    <div class="span8">
-        {% for post in paginator.posts %}
+<div class="row page-body">
+  <div class="span9">
+    {% for post in paginator.posts %}
+    <div class="main-container">
+      <div class="mainbody">
         <h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
-            <div class="row">
-                <div class="span3">
-                    Published At: <strong>{{ post.date | date: "%Y-%m-%d" }}</strong>
-                </div>
-                <div class="span5">
-                    <a href="{{ BASE_PATH }}{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}"></a>
-                </div>
-            </div>
-            {% capture posturl %}<a href="{{ BASE_PATH }}{{ post.url }}" rel="nofollow">Read more...</a>{% endcapture %}
-            {{ post.content | truncatehtml: 800, "  ", posturl }}
-            {% include ever/category_tags_list %}
-            <a href="#page-top" style="float:right">Top</a>
-            <hr>
-        {% endfor %}
-    {% include ever/pagination %}
+        <div class="row">
+          <div class="span3">
+            Published At: <strong>{{ post.date | date: "%Y-%m-%d" }}</strong>
+          </div>
+          <div class="span5">
+          <a href="{{ BASE_PATH }}{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}"></a>
+          </div>
+        </div>
+        {% capture posturl %}<a href="{{ BASE_PATH }}{{ post.url }}" rel="nofollow">Read more...</a>{% endcapture %}
+        {{ post.content | truncatehtml: 800, "  ", posturl }}
+        {% include ever/category_tags_list %}
+        <hr>
+        <a href="#page-top" style="float:right">Top</a>
+        <hr>
+      </div>
+    </div>      
+    {% endfor %}
+
+    <div class="main-container">
+      <div class="mainbody">
+        {% include ever/pagination %}
+      </div>
     </div>
-    <div class="span4">
-         <a href="http://fusion.google.com/add?feedurl=http://evercoding.net/atom.xml" rel="nofollow" title="订阅到Google" target="_blank"><img src="/static/img/rss.jpg" height="24" /></a>
+  
+  </div>
+
+  <div class="span3">
+    <div class="side-container">
+      <div class="sidebar">
+        <a href="http://fusion.google.com/add?feedurl=http://evercoding.net/atom.xml" rel="nofollow" title="订阅到Google" target="_blank"><img src="/static/img/rss.jpg" height="24" /></a>
         <span style="float: left; padding-right: 40px">
           <wb:follow-button uid="2461544952" type="red_1" width="63" height="24" ></wb:follow-button>
         </span>
+      </div>
+    </div>
+     
+    <div class="side-container">
+      <div class="sidebar">
         {% unless site.posts == empty %}
-        <hr>
         <h3>Recent Posts</h3>
         <ul>
         {% for post in site.posts limit: 10 %}
-            <li><span>{{ post.date | date: "%Y-%m-%d" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">
-                {{post.title }}</a></li>
+          <li><span>{{ post.date | date: "%Y-%m-%d" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">
+            {{post.title }}</a></li>
         {% endfor %}
         </ul>
         {% endunless %}
+      </div>
+    </div>
 
+    <div class="side-container">
+      <div class="sidebar">
         {% unless site.categories == empty %}
-        <hr>
         <h3>Categories</h3>
         <ul class="tag_box">
         {% assign categories_list = site.categories %}
         {% include JB/categories_list %}
         </ul>
         {% endunless %}
+      </div>
+    </div>
 
+    <div class="side-container">
+      <div class="sidebar">
         {% unless site.tags == empty %}
-        <hr>
         <h3>Tags</h3>
         <ul class="inline tag_box">
         {% assign tags_list = site.tags %}
         {% include JB/tags_list %}
         </ul>
-        {% endunless %}
+        {% endunless %}      
+      </div>
+    </div>
 
+    <div class="side-container">
+      <div class="sidebar">
         {% if page.links %}
-        <hr>
         <h3>Friend Links</h3>
         {% assign links = page.links %}
         {% include ever/links %}
         {% endif %}
-
+      </div>
     </div>
+  </div>
+
 </div>

@@ -22,7 +22,7 @@ group: navigation
         .appendTo($tabx);
         $(this).nextUntil('h2').remove();
     }).remove();
-    $('.span12').prepend($tab).append($tabx);
+    $('.mainbody').prepend($tab).append($tabx);
     $tabx.children().hide();
     $('div#tab-0').show();
     $tab.children().first().addClass('showing');

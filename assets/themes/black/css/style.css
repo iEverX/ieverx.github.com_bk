@@ -1,0 +1,98 @@
+body {
+    background-image: url(../img/bg.gif);
+}
+
+.page-header {
+    padding: 3px 5px 3px 5px;
+    margin-right: 20px;
+}
+
+.page-header h1 {
+    color: #000;
+}
+
+.page-container {
+    background-image: url(../img/white_bg.png);
+    margin-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /*padding: auto 20px;*/
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.main-container {
+    background-color: #fff;
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.mainbody {
+    padding: 10px;
+    margin: 5px;
+}
+
+.side-container {
+    background-color: #fff;
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.sidebar {
+    padding: 10px;
+    margin: 5px;
+}
+
+footer {
+    text-align: center;
+    color: #000;
+}
+
+.tag_box {
+    list-style:none;
+    margin:0;
+    padding:5px 0 ;
+    overflow:hidden;
+}
+
+.tag_box li {
+    line-height: 24px;
+}
+
+.tag_box.inline li {
+    float: left;
+}
+
+.tag_box a {
+    padding: 4px 6px 3px 6px;
+    margin: 3px;
+    background-color: #ccc;
+
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    text-decoration: none;
+    /*color: #555;*/
+}
+
+.tag_box a span {
+    vertical-align: super;
+    font-size: 0.8em;
+}
+
+.tag_box a:hover {
+    /*color: #111;*/
+}
+
+.post-end {
+    padding-top: 15px;
+    /*margin-top: 145px;*/
+}
