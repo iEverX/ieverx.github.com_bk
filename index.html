@@ -102,9 +102,11 @@ links:
       <div class="sidebar">
         {% if page.links %}
         <h3>Friend Links</h3>
+        <ul>
         {% assign links = page.links %}
         {% include ever/links %}
         {% endif %}
+        </ul>
       </div>
     </div>
   </div>
