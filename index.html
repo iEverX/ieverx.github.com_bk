@@ -9,17 +9,13 @@ links:
   - url: "http://popol1991.github.com"
     name: "Sound Of Wind"
     title: "popol的个人博客"
-  - url: "http://everax.sinaapp.com"
-    name: "我的另一个博客"
-  - url: "http://www.cnblogs.com/codingcook"
-    name: "代码厨师"
-    title: "软件工程团队博客——出品色香味俱全的代码大餐"
-  - url: "http://www.cnblogs.com/ieverx"
-    name: "软件工程个人博客"
 ---
 {% include JB/setup %}
 
+
+
 <div class="row page-body">
+
   <div class="span9">
     {% for post in paginator.posts %}
     <div class="main-container">
@@ -107,12 +103,12 @@ links:
     <div class="side-container">
       <div class="sidebar">
         {% if page.links %}
-        <h3>Friend Links</h3>
+        <h3>Links</h3>
         <ul>
         {% assign links = page.links %}
         {% include ever/links %}
-        {% endif %}
         </ul>
+        {% endif %}
       </div>
     </div>
   </div>
