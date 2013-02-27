@@ -4,7 +4,7 @@ title: "在Jekyll中用SyntaxHighlighter高亮代码"
 tagline: "Use SyntaxHighlighter Highlighting Code In Jekyll"
 description: "在Jekyll中利用SyntaxHighlighter对文章中的代码快进行高亮"
 category: "Jekyll"
-tags: ["Jekyll", "SyntaxHighlighter"]
+tags: ["Jekyll", "SyntaxHighlighter", 代码高亮]
 ---
 {% include JB/setup %}
 
