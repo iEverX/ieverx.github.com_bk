@@ -10,7 +10,6 @@ tags: ["Jekyll", "SyntaxHighlighter"]
 
 之前有一篇博客是关于在Jekyll中利用SyntaxHighlighter去高亮代码的。不过那篇博客中的方法需要每次都加载所有的js文件，加载速度比较慢。其实，可以利用js动态加载js来实现对于不同的语言加载不同的语法分析文件，从而提高js文件的加载速度。废话不多说了，上代码
 
-<pre class="brush: html">
     <script language='javascript'>
         $(function () {
 
@@ -53,7 +52,7 @@ tags: ["Jekyll", "SyntaxHighlighter"]
             }
         });
     </script>
-</pre>
+
 把以上这段代码放在Jekyll模板页的body的最后面即可。
 
 这段代码需要jQuery，我的是1.8.2，不知道低版本的是否可以。此外，shCore.css，shThemeDefault.css文件不是动态加载，所以，这两个文件仍然需要直接放在模板页的头部。

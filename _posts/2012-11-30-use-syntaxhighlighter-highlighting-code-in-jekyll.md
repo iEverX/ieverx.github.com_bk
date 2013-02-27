@@ -11,7 +11,7 @@ tags: ["Jekyll", "SyntaxHighlighter"]
 前几天把博客里的代码高亮改成[SyntaxHighligher][]了，感觉好了很多，看着也舒服，关键是复制代码的时候，行号连着代码在一行复制了。主要参考了官网给的这个链接[Adding a Syntax Highlighter to your Blogger blog][Blogger]。Jekyll的灵活性应该比Blogger更大，而且直接贴改代码，所以对于Jekyll这个方法是合适的。下面是具体的过程
 
 在Jekyll的模板页里的head里面，添加如下代码，选自己需要的语言的刷子就好
-<pre class="brush: html">
+
     <link href='/static/css/syntaxhighlighter/shCore.css' rel='stylesheet' type='text/css'/>
     <link href='/static/css/syntaxhighlighter/shThemeDefault.css' rel='stylesheet' type='text/css'/>
     <script src='/static/js/syntaxhighlighter/shCore.js' type='text/javascript'></script>
@@ -32,9 +32,9 @@ tags: ["Jekyll", "SyntaxHighlighter"]
     <script language='javascript'>
       SyntaxHighlighter.all();
     </script>
-</pre>
+
 其中，src里面是文件的目录，把从官网上下载的对应的js文件和css文件放到对应的目录即可。其实也可以直接引用官网的js文件，比如这样（以下代码来自我参考的网址，去掉了一些不需要的代码）
-<pre class="brush: html">
+
     <link href='http://alexgorbatchev.com/pub/sh/current/styles/shCore.css' rel='stylesheet' type='text/css'/>
     <link href='http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css' rel='stylesheet' type='text/css'/>
     <script src='http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js' type='text/javascript'></script>
@@ -42,14 +42,14 @@ tags: ["Jekyll", "SyntaxHighlighter"]
     <script language='javascript'>
         SyntaxHighlighter.all();
     </script>
-</pre>
+
 不过，这样会导致没有联网的时候，自己写博客预览的时候看不到代码的高亮效果。
 
 之后，写代码的时候，不要使用markdown的语法，直接用pre抱起来就好了。就比如这样
-<pre class="brush: html">
-<pre class="brush: cpp">
-</pre>
-</pre>
+
+    <pre class="brush: cpp">
+    </pre>
+
 
 效果就和以上一样了。这个应该比pygments更好看吧。不过目前加载速度比较慢，以后再改吧
 
