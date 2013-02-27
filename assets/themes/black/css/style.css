@@ -118,6 +118,7 @@ pre::-webkit-scrollbar-thumb {
 
 code {
     color: #008000; // green
-    border: 0;
+    border: 0px solid #eee;
+    border: none;
     padding: 0 3px;
 }
