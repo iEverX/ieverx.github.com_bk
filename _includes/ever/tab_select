@@ -1,0 +1,37 @@
+<style type="text/css">
+  .showing a { color: #000; font-weight: bold; background-color: #aaa; }
+</style>
+
+<script type="text/javascript">
+  $(function() {
+    var $categories = $('h3');
+    var $posts = $('.post');
+    var $tab = $('ul.tag_box');
+    var h = window.location.hash;
+    if (h == '') {
+      $categories.hide().first().show();
+      $posts.hide().first().show();
+      $tab.children().first().addClass('showing');
+    }
+    else {
+      h = h.substring(1);
+      for (var i = $categories.length - 1; i >= 0; --i) {
+        if ($categories.eq(i)[0].id == h) {
+          $categories.hide().eq(i).show();
+          $posts.hide().eq(i).show();
+          $tab.children().eq(i).addClass('showing')
+          break;
+        }
+      }
+      
+    }
+    $('ul.tag_box').children().each(function(index) {
+      $(this).click(function() {
+        $categories.hide().eq(index).show();
+        $posts.hide().eq(index).show();
+        $(this).addClass('showing').siblings().removeClass('showing');
+        // return false;
+      });
+    });
+  });
+</script>
