@@ -4,7 +4,7 @@ title: "用Tornado连接新浪微博"
 tagline: "Connect Sina Weibo With Tornado"
 description: "利用Tornado框架连接新浪微博，发送邮件"
 category: "Python"
-tags: ["Python", "Web开发", "Tornado", "微博"]
+tags: ["Python", "web开发", "Tornado", "新浪微博"]
 ---
 {% include JB/setup %}
 
