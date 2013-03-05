@@ -3,7 +3,6 @@ layout: post
 title: "新学期的第一个月"
 tagline: "First Month Of New Term"
 description: ""
-category: "个人"
 tags: ["总结", "新学期"]
 ---
 {% include JB/setup %}

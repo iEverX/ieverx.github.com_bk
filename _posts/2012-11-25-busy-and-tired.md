@@ -3,7 +3,6 @@ layout: post
 title: "忙&amp;累"
 tagline: "Busy And Tired"
 description: ""
-category: "个人"
 tags: ["总结", "大学", "编程生涯"]
 ---
 {% include JB/setup %}

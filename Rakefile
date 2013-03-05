@@ -64,7 +64,7 @@ task :post do
     post.puts 'title: ""'
     post.puts "tagline: \"#{tagline.gsub(/-/,' ').gsub(/\b\w/) {$&.upcase}}\""
     post.puts 'description: ""'
-    post.puts "category: "
+    # post.puts "category: "
     post.puts "tags: []"
     post.puts "---"
     post.puts "{% include JB/setup %}"

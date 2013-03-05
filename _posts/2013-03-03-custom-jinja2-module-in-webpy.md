@@ -3,7 +3,6 @@ layout: post
 title: "web.py中自定义jinja2模块"
 tagline: "Custom Jinja2 Module In Web.Py"
 description: ""
-category: Python
 tags: [Python, jinja2, web开发, web.py]
 ---
 {% include JB/setup %}

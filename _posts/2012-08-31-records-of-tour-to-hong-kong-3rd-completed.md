@@ -3,7 +3,6 @@ layout: post
 title: "香港游小记三（完）"
 tagline: "Records Of Tour To Hong Kong 3rd (completed)"
 description: "暑假在香港的最后两天的行程以及对于香港的一些印象"
-category: "游记"
 tags: ["香港", "旅游", "暑假", "印象"]
 ---
 {% include JB/setup %}

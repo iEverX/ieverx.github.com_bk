@@ -3,7 +3,6 @@ layout: post
 title: "浮躁的暑假浮躁的我"
 tagline: "Fickle Summer Vacation, Fickle Me"
 description: "暑假结束之时对自己的暑假规划、表现所做的一些反思"
-category: "个人"
 tags: ["总结", "反思", "暑假"]
 ---
 {% include JB/setup %}

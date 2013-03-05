@@ -3,7 +3,6 @@ layout: post
 title: "写在学期末"
 tagline: "On The End Of The Term"
 description: "期末的一些感想"
-category: "个人"
 tags: ["感想", "大学", "编程生涯"]
 ---
 {% include JB/setup %}

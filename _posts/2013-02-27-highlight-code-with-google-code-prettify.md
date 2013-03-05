@@ -3,7 +3,6 @@ layout: post
 title: "Jekyll中使用google-code-prettify高亮代码"
 tagline: "Highlight Code With Google-code-prettify In Jekyll"
 description: "在Jekyll中高亮代码，利用google code pretty"
-category: Jekyll
 tags: [Jekyll, 代码高亮, google-code-prettify]
 ---
 {% include JB/setup %}

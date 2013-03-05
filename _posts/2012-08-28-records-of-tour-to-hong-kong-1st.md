@@ -3,7 +3,6 @@ layout: post
 title: "香港游小记一"
 tagline: "Records Of Tour To Hong Kong 1st"
 description: "2012年暑假，随访学团赴香港，在火车上以及第一天的历程等"
-category: "游记"
 tags: ["香港", "旅游", "暑假"]
 ---
 {% include JB/setup %}
