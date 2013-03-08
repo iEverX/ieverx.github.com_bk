@@ -36,7 +36,20 @@
 
     <div class="main-container">
       <div class="mainbody">
-        {% include JB/comments %}
+        <button class="btn-primary btn-small" id="show_disqus">Show Comments</button>
+        <script type="text/javascript">
+          $(function() {
+            $('#show_disqus').click(function() {
+              var s = '<div id="disqus_thread"></div><script type="text/javascript">';
+              s += '{% if site.safe == false %}var disqus_developer = 1;{% endif %}';
+              s += "var disqus_shortname = '{{ site.JB.comments.disqus.short_name }}';";
+              s += "{% if page.wordpress_id %}var disqus_identifier = '{{page.wordpress_id}} {{site.production_url}}/?p={{page.wordpress_id}}';{% else %} var disqus_identifier = '{{ page.url }}';{% endif %}";
+              s += "(function() {var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);})();";
+              s += '</' + 'script>';
+              $('#show_disqus').after('<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>').after('<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>').after(s).hide();
+            });
+          });
+        </script>
       </div>
     </div>
     
