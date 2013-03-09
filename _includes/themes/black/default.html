@@ -80,7 +80,7 @@
   <script type="text/javascript">
   $(function() {
 
-    function travers($node, len, maxCount) {
+    function traverse($node, len, maxCount) {
       var reachMaxCount = len > maxCount;
       if (reachMaxCount) {
         $node.hide();
@@ -100,14 +100,14 @@
           }
         }
         else if ($contents[i].nodeType == 1) { // Element
-          len = travers($contents.eq(i), len, maxCount);
+          len = traverse($contents.eq(i), len, maxCount);
         }
       }
       return len;
     }
 
     $('.post_at_index').each(function() {
-      travers($(this), 0, {{ site.description_length }});
+      traverse($(this), 0, {{ site.description_length }});
       var thisUrl = $(this).siblings().first().children().attr('href');
       $(this).after('\n<a href="' + thisUrl + '" rel="nofollow">' + 'Read More ...</a>');
     });
