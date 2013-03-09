@@ -77,6 +77,42 @@
       window.prettyPrint && prettyPrint();
     });
   </script>
+  <script type="text/javascript">
+  $(function() {
+
+    function travers($node, len, maxCount) {
+      var reachMaxCount = len > maxCount;
+      if (reachMaxCount) {
+        $node.hide();
+      }
+      var $contents = $node.contents();
+      for (var i = 0; i < $contents.length; ++i) {
+        if (reachMaxCount) {
+          $contents.eq(i).hide();
+        }
+        if ($contents[i].nodeType == 3) { // TextNode
+          var tmp = len;
+          var s = $contents[i].nodeValue;
+          len += s.length;
+          reachMaxCount = len > maxCount;
+          if (reachMaxCount) {
+            $contents[i].nodeValue = s.substring(0, maxCount - tmp);
+          }
+        }
+        else if ($contents[i].nodeType == 1) { // Element
+          len = travers($contents.eq(i), len, maxCount);
+        }
+      }
+      return len;
+    }
+
+    $('.post_at_index').each(function() {
+      travers($(this), 0, {{ site.description_length }});
+      var thisUrl = $(this).siblings().first().children().attr('href');
+      $(this).after('\n<a href="' + thisUrl + '" rel="nofollow">' + 'Read More ...</a>');
+    });
+  });
+</script>
   <script type="text/javascript" src="/static/js/disqus/count_each_page.js">
     var disqus_shortname = '{{ site.JB.comments.disqus.short_name }}'; 
     /* * * DON'T EDIT BELOW THIS LINE * * */
