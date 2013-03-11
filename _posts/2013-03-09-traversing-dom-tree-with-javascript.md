@@ -21,6 +21,7 @@ tags: [Javascript, jQuery, DOM, Jekyll, Liquid]
           for (var i = 0; i < $contents.length; ++i) {
             if (reachMaxCount) {
               $contents.eq(i).hide();
+              continue;
             }
             if ($contents[i].nodeType == 3) { // TextNode
               var tmp = len;
