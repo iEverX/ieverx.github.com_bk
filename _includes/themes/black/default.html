@@ -108,9 +108,11 @@
     }
 
     $('.post_at_index').each(function() {
-      traverse($(this), 0, {{ site.description_length }});
-      var thisUrl = $(this).siblings().first().children().attr('href');
-      $(this).after('\n<a href="' + thisUrl + '" rel="nofollow">' + 'Read More ...</a>');
+      var count = traverse($(this), 0, {{ site.description_length }});
+      if (count > {{ site.description_length }}) {
+        var thisUrl = $(this).siblings().first().children().attr('href');
+        $(this).after('\n<a href="' + thisUrl + '" rel="nofollow">' + 'Read More ...</a>');
+      }
     });
   });
 </script>
