@@ -44,6 +44,7 @@
               s += '{% if site.safe == false %}var disqus_developer = 1;{% endif %}';
               s += "var disqus_shortname = '{{ site.JB.comments.disqus.short_name }}';";
               s += "{% if page.wordpress_id %}var disqus_identifier = '{{page.wordpress_id}} {{site.production_url}}/?p={{page.wordpress_id}}';{% else %} var disqus_identifier = '{{ page.url }}';{% endif %}";
+              s += "var disqus_url = '{{ site.production_url }}';"
               s += "(function() {var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);})();";
               s += '</' + 'script>';
               $('#show_disqus').after('<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>').after('<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>').after(s).hide();
