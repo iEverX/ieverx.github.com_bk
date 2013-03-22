@@ -23,7 +23,7 @@ links:
           Posted by <strong>{{ site.author.name }}</strong> at <strong>{{ post.date | date: "%Y-%m-%d" }}</strong> with tags {% for tag in post.tags %}<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref" rel="nofollow">{{ tag }}</a>{% if forloop.last %}{% else %}, {% endif %}{% endfor %}
         </p>
         {% capture posturl %}<a href="{{ BASE_PATH }}{{ post.url }}" rel="nofollow">Read more...</a>{% endcapture %}
-        <div class="post_at_index">
+        <div class="post_at_index thepost">
         {{ post.content }}
         </div>
         <a href="javascript:void(0);" style="float:right" onclick="window.scrollTo(0, 0);">Top</a>
