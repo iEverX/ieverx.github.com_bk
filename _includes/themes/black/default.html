@@ -57,8 +57,6 @@
 
     <footer>
         <p>&copy; {{ site.author.name }} {{ site.start_year }} <span id="now_year"></span>
-          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
         </p>
         <script type="text/javascript">
           var now_year = new Date().getFullYear();
@@ -116,6 +114,6 @@
     });
   });
 </script>
-
+  {% include JB/analytics %}
 </body>
 </html>
