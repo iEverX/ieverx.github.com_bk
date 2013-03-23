@@ -87,7 +87,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : evergit
+      short_name : evcblog
     livefyre :
       site_id : 123
     intensedebate :
