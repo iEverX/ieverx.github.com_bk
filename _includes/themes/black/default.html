@@ -71,12 +71,13 @@
   <script type="text/javascript" src="{{ ASSET_PATH }}/google-code-prettify/prettify.js"></script>
   <script type="text/javascript">
     $(function() {
+
+      $('a[href^="http"]').each(function () {
+        $(this).attr('target', '_blank');
+      });
+      
       $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto');
       window.prettyPrint && prettyPrint();
-    });
-  </script>
-  <script type="text/javascript">
-    $(function() {
 
       function traverse($node, len, maxCount) {
         var reachMaxCount = len > maxCount;

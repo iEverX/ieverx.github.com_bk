@@ -17,18 +17,23 @@ group: "navigation"
 
 ### 关于网站
 
-Jekyll搭的静态网站，就是没事的时候鼓捣的，所有源码可以在<http://github.com/iEverX/ieverx.github.com>找到  
-其实自己有在SAE上搭了一个Wordpress的博客，<http://everax.sinaapp.com>，也叫天外天
-
 在这个网站，我会记录一些自己在编程时的一些思想、感悟、体会，分享自己编程的点点滴滴，也算是自己编程之路的一个个脚印吧。同时，可能还会有一些自己翻译的文章（当然英文不好，这个就是暂时放在这里）。此外，也可能会有一些自己的生活杂记。
+
+#### 技术
+
+* 网站源码：<http://github.com/iEverX/ieverx.gituhub.com>
+* [Jekyll Bootstrap][]
+* [Twitter Bootstrap][]
+* [jQuery][]
 
 ### 联系我？
 
 我的邮箱：g.everax(at)gmail.com，有时查的很勤，有时就少看  
 新浪微博: [iEverX][weibo]，有事没事就去逛逛  
 github：[iEverX][github]，我的一些代码可以在这里找到  
-CSDN：everax，主要是问问题的，偶尔回答一些比较菜的问题  
-豆瓣：<http://www.douban.com/people/everx/> 不怎么去。。这个地址后面的everx不知是当时忘了写i了还是忘了写a了，还是本来就没想写。。
 
 [weibo]: http://weibo.com/ieverx
 [github]: http://github.com/iEverX
+[Jekyll Bootstrap]: http://jekyllbootstrap.com "The Definitive Jekyll Blogging Framework"
+[Twitter Bootstrap]: http://twitter.github.com/bootstrap/
+[jQuery]: http://jquery.com
