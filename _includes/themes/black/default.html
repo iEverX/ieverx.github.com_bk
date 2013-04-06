@@ -95,7 +95,7 @@
             var s = $contents[i].nodeValue;
             len += s.length;
             reachMaxCount = len > maxCount;
-            if (reachMaxCount) {
+            if (reachMaxCount && $contents[i].parentNode.nodeName != 'A') {
               $contents[i].nodeValue = s.substring(0, maxCount - tmp);
             }
           }
