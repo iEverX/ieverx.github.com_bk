@@ -21,7 +21,7 @@ group: "navigation"
 
 #### 技术
 
-* 网站源码：<http://github.com/iEverX/ieverx.gituhub.com>
+* 网站源码：<https://github.com/iEverX/ieverx.github.com>
 * [Jekyll Bootstrap][]
 * [Twitter Bootstrap][]
 * [jQuery][]
