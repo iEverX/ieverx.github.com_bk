@@ -41,18 +41,18 @@ body {
     padding-right: 20px;
     /*padding: auto 20px;*/
 
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
 }
 
 .main-container {
     background-color: #fff;
     margin-bottom: 10px;
 
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
 }
 
 .mainbody {
@@ -64,9 +64,9 @@ body {
     background-color: #fff;
     margin-bottom: 10px;
 
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
 }
 
 .sidebar {
