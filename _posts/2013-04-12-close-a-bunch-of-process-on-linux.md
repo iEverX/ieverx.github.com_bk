@@ -12,7 +12,7 @@ tags: [Linux, shell]
 在Linux下面，敲几个命令就OK了，以下每行都可以，有些区别
 
     ps -e | grep chorme | cut -c 1-5 | xargs kill -9
-    ps -e | awk '$4=="chrome" {print $1}' | xargs kill -9ps
+    ps -e | awk '$4=="chrome" {print $1}' | xargs kill -9
 
 `ps -e`的输出如下
 
