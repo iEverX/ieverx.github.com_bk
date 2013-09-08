@@ -3,7 +3,13 @@ body {
     background-color: #eee;
 }
 
-h1 {}
+.left {
+    width: 70.468% !important;
+}
+
+.right {
+    width: 27.404% !important;
+}
 
 .shadow {
     -webkit-box-shadow: 0 0 45px rgba(0, 0, 0, 0.2);
