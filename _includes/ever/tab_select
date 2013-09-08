@@ -1,5 +1,5 @@
 <style type="text/css">
-  .showing a { color: #000; font-weight: bold; background-color: #aaa; }
+  .showing a { color: #000; font-weight: bold;}
 </style>
 
 <script type="text/javascript">
@@ -23,7 +23,7 @@
           break;
         }
       }
-      
+
     }
     $('ul.tag_box').children().each(function(index) {
       $(this).click(function() {

@@ -15,7 +15,7 @@ links:
 
   <div class="span9">
     {% for post in paginator.posts %}
-    <div class="main-container">
+    <div class="main-container shadow">
       <div class="mainbody">
         <h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
         <p>
@@ -28,25 +28,25 @@ links:
         <a href="javascript:void(0);" style="float:right" onclick="window.scrollTo(0, 0);">Top</a>
         <div style="clear: both;"></div>
       </div>
-    </div>      
+    </div>
     {% endfor %}
 
-    <div class="main-container">
+    <div class="main-container shadow">
       <div class="mainbody">
         {% include ever/pagination %}
       </div>
     </div>
-  
+
   </div>
 
   <div class="span3">
-    <div class="side-container">
+    <div class="side-container shadow">
       <div class="sidebar">
         <wb:follow-button uid="2461544952" type="red_1" width="63" height="24" ></wb:follow-button>
       </div>
     </div>
-     
-    <div class="side-container">
+
+    <div class="side-container shadow">
       <div class="sidebar">
         {% unless site.posts == empty %}
         <h3>Recent Posts</h3>
@@ -60,19 +60,19 @@ links:
       </div>
     </div>
 
-    <div class="side-container">
+    <div class="side-container shadow">
       <div class="sidebar">
         {% unless site.tags == empty %}
         <h3>Tags</h3>
-        <ul class="inline tag_box">
+        <div class="tag_box">
         {% assign tags_list = site.tags %}
-        {% include JB/tags_list %}
-        </ul>
-        {% endunless %}      
+        {% include ever/tags_list %}
+        </div>
+        {% endunless %}
       </div>
     </div>
 
-    <div class="side-container">
+    <div class="side-container shadow">
       <div class="sidebar">
         {% if page.links %}
         <h3>Links</h3>

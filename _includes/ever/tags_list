@@ -1,0 +1,14 @@
+{% if site.JB.tags_list.provider == "custom" %}
+  {% include custom/tags_list %}
+{% else %}
+  {% if tags_list.first[0] == null %}
+    {% for tag in tags_list %}
+        <a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref" class="btn btn-mini">{{ tag }} <span>{{ site.tags[tag].size }}</span></a>
+    {% endfor %}
+  {% else %}
+    {% for tag in tags_list %}
+        <a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag[0] }}-ref" class="btn btn-mini">{{ tag[0] }} <span>{{ tag[1].size }}</span></a>
+    {% endfor %}
+  {% endif %}
+{% endif %}
+{% assign tags_list = nil %}
