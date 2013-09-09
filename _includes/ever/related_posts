@@ -1,8 +1,8 @@
 <script type="text/javascript">
-    var wumiiPermaLink = "{{ site.production_url }}{{ post.url }}"; //请用代码生成文章永久的链接
-    var wumiiTitle = "{{ page.title }}"; //请用代码生成文章标题
-    var wumiiTags = "{% if tags_list.first[0] == null %}{% for tag in tags_list %}{{ tag }}{% if forloop.last == false %},{% endif %}{% endfor %}{% else %}{% for tag in tags_list %}{{ tag[0] }}{% if forloop.last == false %},{% endif %}{% endfor %}{% endif %}"; //请用代码生成文章标签，以英文逗号分隔，如："标签1,标签2"
-    var wumiiCategories = []; //请用代码生成文章分类，分类名放在 JSONArray 中，如: ["分类1", "分类2"]
+    var wumiiPermaLink = "{{ site.production_url }}{{ post.url }}";
+    var wumiiTitle = "{{ page.title }}";
+    var wumiiTags = "{% if tags_list.first[0] == null %}{% for tag in tags_list %}{{ tag }}{% if forloop.last == false %},{% endif %}{% endfor %}{% else %}{% for tag in tags_list %}{{ tag[0] }}{% if forloop.last == false %},{% endif %}{% endfor %}{% endif %}";
+    var wumiiCategories = [];
     var wumiiSitePrefix = "http://blog.evercoding.net/";
     var wumiiParams = "&num=5&mode=3&pf=JAVASCRIPT";
 </script>
