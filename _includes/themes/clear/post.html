@@ -75,5 +75,15 @@
         {% endunless %}
       </div>
     </div>
+
+    <div class="side-container shadow">
+      <div class="sidebar">
+        <script type="text/javascript" id="wumiiRelatedItems"></script>
+      </div>
+    </div>
+
   </div>
 </div>
+
+{% assign tags_list = page.tags %}
+{% include ever/related_posts %}

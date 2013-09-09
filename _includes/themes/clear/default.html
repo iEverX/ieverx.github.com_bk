@@ -62,8 +62,7 @@
     </div>
 
     <footer>
-        <p>&copy; {{ site.author.name }} {{ site.start_year }} <span id="now_year"></span>
-        </p>
+        <p>&copy; {{ site.start_year }} <span id="now_year"></span> {{ site.author.name }}. </p>
         <script type="text/javascript">
           var now_year = new Date().getFullYear();
           if (now_year != {{ site.start_year }}) {
