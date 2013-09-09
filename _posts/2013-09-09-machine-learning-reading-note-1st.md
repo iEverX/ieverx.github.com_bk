@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "《机器学习》读书笔记一"
-tagline: "Maching Learning Reading Note 1st"
+tagline: "Machine Learning Reading Note 1st"
 description: "Tom M.Mitchell的《机器学习》读书笔记 第一章——序言"
 tags: [机器学习, 读书笔记]
 ---
