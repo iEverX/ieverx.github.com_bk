@@ -55,7 +55,7 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     /*padding: auto 20px;*/
-
+    width: 1170px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -127,7 +127,7 @@ pre::-webkit-scrollbar-thumb {
 }
 
 code {
-    color: #008000; // green
+    color: #008000; 
     border: 0px solid #eee;
     border: none;
     padding: 0 3px;
