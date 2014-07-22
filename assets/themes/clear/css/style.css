@@ -49,6 +49,10 @@ body {
     /*color: #000;*/
 }
 
+.navbar-container {
+    width: 1170px !important;
+}
+
 .page-container {
     /*background-image: url(../img/white_bg.png);*/
     margin-top: 60px;
