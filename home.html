@@ -5,18 +5,40 @@ tagline: 天外有天，山外有山
 ---
 {% include JB/setup %}
 
-{% for post in site.posts %}
-  
-    <section class="post-glance">
-        <header class="post-header">
-            <h2 class="post-title"><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
-            <p class="post-meta">
-                post by {{ site.author.name }} at {{ post.date | date: '%Y-%m-%d' }} with tags {% for tag in post.tags %}<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref" rel="nofollow">{{ tag }}</a>{% if forloop.last %}{% else %}, {% endif %}{% endfor %}
-            </p>
-        </header>
-        <div class="post-description">
-            {{ post.content | truncate: 100 }}
-        </div>
-    </section>
+{% assign post = site.posts.first %}
+<section class="post-glance">
+    <header class="post-header">
+        <h2 class="post-title"><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
+        <p class="post-meta">
+            post by {{ site.author.name }} at {{ post.date | date: '%Y-%m-%d' }} with tags {% for tag in post.tags %}<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref" rel="nofollow">{{ tag }}</a>{% if forloop.last %}{% else %}, {% endif %}{% endfor %}
+        </p>
+    </header>
+    <div class="post-description">
+        {{ post.content }}
+    </div>
+</section>
+{% assign post = nil %}
 
-{% endfor %}
+<hr>
+
+<div class="pure-g">
+    <section class="section pure-u-1 pure-u-md-1-2">
+        <header>
+            <h2 class="section-title">Recent Posts</h2>
+        </header>
+        {% for post in site.posts limit:5 %}
+            <div class="recent-post">
+                <h3 class="post-title"><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
+                <div class="post-meta">
+                    <span><i class="fa fa-calendar-o"></i> {{ post.date | date: '%Y-%m-%d' }}</span>
+                    <span><i class="fa fa-tags"></i></i>
+                        {% for tag in post.tags %}
+                            <a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref" rel="nofollow">{{ tag }}</a>
+                        {% endfor %}
+                    </span>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+</div>
+

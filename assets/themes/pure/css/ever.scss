@@ -33,21 +33,19 @@ a {
         margin: 0;
         padding: 0;
         list-style: 0;
+        font-size: 1.3rem;
 
         & > li {
-            display: inline-block;
+            padding: 0.2rem 0;
 
             & > a {
                 background: transparent;
-                border: 2px solid rgb(176, 202, 219);
                 color: #fff;
                 margin-top: 1rem;
                 letter-spacing: 0.05rem;
-                text-transform: uppercase;
-                font-size: 85%;
 
                 &:hover, &:focus {
-                    border: 2px solid rgb(61, 146, 201);
+                    color: #ccc;
                     text-decoration: none;
                 }
             }
@@ -120,7 +118,6 @@ a {
 
 .footer {
     text-align: center;
-
 }
 
 
@@ -131,7 +128,7 @@ a {
     }
 
     .header {
-        margin: 80% 2rem 0;
+        margin: 80% 1.5rem 0;
         text-align: right;
     }
 
