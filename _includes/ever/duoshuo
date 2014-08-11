@@ -1,3 +1,6 @@
+<!-- 多说评论框 start -->
+<div id="ds-comment" class="ds-thread" data-thread-key="{{ page.url }}" data-title="{{ page.title }}" data-url="{{ site.production_url }}{{ page.url }}"></div>
+<!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"{{ site.JB.comments.duoshuo.short_name }}"};

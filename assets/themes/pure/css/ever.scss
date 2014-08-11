@@ -25,10 +25,14 @@ a {
     text-align: center;
     top: auto;
     margin: 3rem auto;
+
+    & > .avatar {
+        border-radius: 50%;
+    }
 }
 
 .sidebar {
-    background: rgb(61, 79, 93);
+    background: #5E606D;
     color: #fff;
 }
 
@@ -49,7 +53,7 @@ a {
                 letter-spacing: 0.05rem;
 
                 &:hover, &:focus {
-                    color: #ccc;
+                    color: #ff7700;
                     text-decoration: none;
                 }
             }
@@ -123,8 +127,7 @@ a {
     }
 
     .header {
-        margin: 80% 1.5rem 0;
-        text-align: right;
+        margin: 50% 1.5rem 0;
     }
 
     .sidebar {

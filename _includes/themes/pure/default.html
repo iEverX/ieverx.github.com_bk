@@ -16,6 +16,7 @@
     <div id="layout" class="pure-g">
         <div class="sidebar pure-u-1 pure-u-md-1-5">
             <div class="header">
+                <img src="{{ ASSET_PATH }}/img/avatar.png" alt="" class="avatar">
                 <hgroup>
                     <h1 class="brand-title">{{ site.title }}</h1>
                     <h2 class="brand-tagline">{{ site.tagline }}</h2>
@@ -32,7 +33,7 @@
                             <a href="/messages.html">Messages</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/links">Links</a>
+                            <a href="/links.html">Links</a>
                         </li>
                     </ul>
                 </nav>
@@ -57,6 +58,5 @@
             window.prettyPrint && prettyPrint();
         });
     </script>
-    {% include ever/duoshuo %}
 </body>
 </html>
