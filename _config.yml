@@ -84,7 +84,9 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : disqus
+    provider : duoshuo
+    duoshuo:
+      short_name: evercoding
     disqus :
       short_name : evcblog
     livefyre :

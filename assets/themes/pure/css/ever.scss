@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-family: "Microsoft Yahei", sans-serif, serif;
+}
+
 a {
     text-decoration: none;
     color: rgb(61, 146, 201);
@@ -57,35 +61,7 @@ a {
     padding: 2rem 1rem 0;
 }
 
-.post-glance {
-    padding-bottom: 2rem;
-
-    .post-title {
-        font-size: 2rem;
-        margin-bottom: 0.2rem;
-        
-        & > a {
-            color: #333;
-        }
-
-        & > a:hover, & > a:focus {
-            color: #444;
-        }
-    }
-
-    .post-meta {
-        color: #999;
-        font-size: 90%;
-        margin: 0;
-    }
-
-    .post-description {
-        font-family: Georgia, "Cambria", serif;
-        color: #444;
-        line-height: 1.8rem;
-    }
-}
-
+.post-glance,
 .post {
     padding-bottom: 2rem;
 
@@ -101,6 +77,11 @@ a {
         & > a:hover, & > a:focus {
             color: #444;
         }
+
+        & > span {
+            font-size: 0.7em;
+            color: #aaa;
+        }
     }
 
     .post-meta {
@@ -109,15 +90,29 @@ a {
         margin: 0;
     }
 
-    .post-description {
+    .post-content {
         font-family: Georgia, "Cambria", serif;
         color: #444;
         line-height: 1.8rem;
     }
 }
 
+.post-glance {
+    padding-bottom: 0;
+}
+
 .footer {
     text-align: center;
+}
+
+.divider {
+    margin: 3rem -50%;
+    border-top: 1px solid #333;
+    height: 0;
+}
+
+.divider-dashed {
+    border-top-style: dashed;
 }
 
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <title>PURE</title>
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ ASSET_PATH }}/lib/font-awesome/css/font-awesome.min.css">
     <script src="{{ ASSET_PATH }}/lib/jquery/jquery-1.11.1.min.js"></script>
     <script src="{{ ASSET_PATH }}/lib/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </head>
 <body>
     <div id="layout" class="pure-g">
@@ -52,9 +53,10 @@
     </div>
     <script>
         $(function() {
-            $('pre').addClass('prettyprint linenums').attr('style', 'overflow-x:auto');
+            $('pre').addClass('prettyprint linenums').css('overflow-x', 'auto');
             window.prettyPrint && prettyPrint();
         });
     </script>
+    {% include ever/duoshuo %}
 </body>
 </html>
