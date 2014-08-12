@@ -1,0 +1,52 @@
+.grid-tabs {
+    padding: 3rem 0 0;
+    margin: 0;
+}
+
+.grid-tab {
+    
+}
+
+.grid-tab-link {
+    border: 1px solid transparent;
+    padding: 1rem;
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    background: transparent;
+}
+
+.grid-tab-link-selected {
+    border: 1px solid #ccc;
+    border-bottom-color: transparent;
+    background: #fff;
+}
+
+.grid-content {
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+
+.accordion {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.accordion-item-title {
+    cursor: pointer;
+    padding: .5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.accordion-item-content {
+    margin: 0;
+    padding: 0 0 .5rem 1rem;
+    list-style: none;
+}
+
+.accordion-item-content > li {
+    padding: .2rem;
+}

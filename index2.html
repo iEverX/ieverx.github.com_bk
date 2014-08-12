@@ -1,0 +1,94 @@
+---
+layout: default
+title: 天外天
+tagline: 天外有天，山外有山
+links:
+  - url: "http://blog.felixpy.com"
+    name: "Felix的个人博客"
+  - url: "http://popol1991.github.com"
+    name: "Sound Of Wind"
+    title: "popol的个人博客"
+  - url: "http://laip.me"
+    name: "半天成"
+    title: "shoumu的个人博客"
+  - url: "http://youthyblog.com"
+    name: "Youthy的伟大航路"
+    title: "二次元中奋战的程序猿"
+---
+{% include JB/setup %}
+
+<div class="row-fluid page-body">
+
+  <div class="span9 left">
+    {% for post in paginator.posts %}
+    <div class="main-container shadow">
+      <div class="mainbody">
+        <h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
+        <p>
+          Posted by <strong>{{ site.author.name }}</strong> at <strong>{{ post.date | date: "%Y-%m-%d" }}</strong> with tags {% for tag in post.tags %}<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref" rel="nofollow">{{ tag }}</a>{% if forloop.last %}{% else %}, {% endif %}{% endfor %}
+        </p>
+        {% capture posturl %}<a href="{{ BASE_PATH }}{{ post.url }}" rel="nofollow">Read more...</a>{% endcapture %}
+        <div class="post_at_index thepost">
+        {{ post.content }}
+        </div>
+        <a href="javascript:void(0);" style="float:right" onclick="window.scrollTo(0, 0);">Top</a>
+        <div style="clear: both;"></div>
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="main-container shadow">
+      <div class="mainbody">
+        {% include ever/pagination %}
+      </div>
+    </div>
+
+  </div>
+
+  <div class="span3 right">
+    <div class="side-container shadow">
+      <div class="sidebar">
+        <wb:follow-button uid="2461544952" type="red_1" width="63" height="24" ></wb:follow-button>
+      </div>
+    </div>
+
+    <div class="side-container shadow">
+      <div class="sidebar">
+        {% unless site.posts == empty %}
+        <h3>Recent Posts</h3>
+        <ul>
+        {% for post in site.posts limit: 10 %}
+          <li><span>{{ post.date | date: "%Y-%m-%d" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">
+            {{post.title }}</a></li>
+        {% endfor %}
+        </ul>
+        {% endunless %}
+      </div>
+    </div>
+
+    <div class="side-container shadow">
+      <div class="sidebar">
+        {% unless site.tags == empty %}
+        <h3>Tags</h3>
+        <div class="tag_box">
+        {% assign tags_list = site.tags %}
+        {% include ever/tags_list %}
+        </div>
+        {% endunless %}
+      </div>
+    </div>
+
+    <div class="side-container shadow">
+      <div class="sidebar">
+        {% if page.links %}
+        <h3>Links</h3>
+        <ul>
+        {% assign links = page.links %}
+        {% include ever/links %}
+        </ul>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+</div>
