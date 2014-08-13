@@ -97,7 +97,15 @@ $(function() {
         $('.grid-tab-link').removeClass('grid-tab-link-selected');
         $(this).addClass('grid-tab-link-selected');
         $('.grid-panel').hide();
-        $($(this).attr('href')).show();
+        var containerTag = $(this).attr('href');
+        $(containerTag).show();
+        var noContentDisplay = all($(containerTag + ' .accordion-item-content'), function(e) {
+            return $(e).css('display') == 'none';
+        });
+        if (noContentDisplay) {
+            $(containerTag + ' .accordion-item-content').eq(0).show();
+        }
+
     });
 
     $('.accordion-item-title').click(function() {
@@ -131,6 +139,24 @@ $(function() {
         });
         $ul.append($lis);
         return $ul;
+    }
+
+    function any(arrLike, anyFunc) {
+        for (var i = 0; i < arrLike.length; ++i) {
+            if (anyFunc(arrLike[i])) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function all(arrLike, allFunc) {
+        for (var i = 0; i < arrLike.length; ++i) {
+            if (!allFunc(arrLike[i])) {
+                return false;
+            }
+        }
+        return true;
     }
     
 });
