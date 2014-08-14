@@ -131,4 +131,9 @@ theme: pure
         })
         .on('end', draw)
         .start();
+
+    if (location.hash != '') {
+        showPosts(location.hash.substring(1));
+    }
+
 </script>
