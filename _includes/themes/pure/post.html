@@ -2,7 +2,7 @@
     <header class="post-header">
         <h1 class="post-title">{{ page.title }} <span class="post-tagline">{{ page.tagline }}</span></h1>
         <p class="post-meta">
-            post by {{ site.author.name }} at {{ page.date | date: '%Y-%m-%d' }} with tags {% for tag in page.tags %}<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref" rel="nofollow">{{ tag }}</a>{% if forloop.last %}{% else %}, {% endif %}{% endfor %}
+            post by {{ site.author.name }} at {{ page.date | date: '%Y-%m-%d' }} with tags {% for tag in page.tags %}<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}" rel="nofollow">{{ tag }}</a>{% if forloop.last %}{% else %}, {% endif %}{% endfor %}
         </p>
     </header>
     <div class="post-content">
