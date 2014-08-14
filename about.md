@@ -32,7 +32,7 @@ github：[iEverX][github]，我的一些代码可以在这里找到
 
 [weibo]: http://weibo.com/ieverx
 [github]: http://github.com/iEverX
-[Jekyll Bootstrap]: http://jekyllrb.com "Transform your plain text into static websites and blogs"
+[Jekyll]: http://jekyllrb.com "Transform your plain text into static websites and blogs"
 [Twitter Bootstrap]: http://twitter.github.com/bootstrap/
 [jQuery]: http://jquery.com
 [purecss]: http://purecss.io
