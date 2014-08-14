@@ -19,6 +19,7 @@ a {
 
 #layout {
     padding: 0;
+    height: 100vh;
 }
 
 .header {
@@ -71,6 +72,12 @@ a {
 
 .content {
     padding: 2rem 1rem 0;
+    height: 100%;
+}
+
+#mainbody {
+    min-height: 100%;
+    margin-bottom: -4rem;
 }
 
 .post-glance,
@@ -127,6 +134,7 @@ a {
 
 .footer {
     text-align: center;
+    height: 2rem;
 }
 
 .divider {
@@ -203,6 +211,24 @@ a {
 
     & > li {
         padding: .2rem;
+    }
+}
+
+.tag_posts {
+    .tag_title {
+        font-family: "Microsoft Yahei";
+        font-size: 2rem;
+        color: orange;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        & > li {
+            padding: .2rem;
+            font-size: 1.2rem;
+        }
     }
 }
 
