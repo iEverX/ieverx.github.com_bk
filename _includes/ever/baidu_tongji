@@ -1,0 +1,11 @@
+{% if site.JB.analytics.baidu.num != "286a0fd3582530031faa80f383f53a77" or site.production_url == 'http://blog.EverCoding.net' %}
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?{{ site.JB.analytics.baidu.num }}";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+{% endif %}

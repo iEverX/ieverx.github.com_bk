@@ -107,7 +107,9 @@ JB :
   analytics :
     provider : google
     google :
-        tracking_id : 'UA-34056607-1'
+        tracking_id : 'UA-54098391-1'
+    baidu:
+        num: '286a0fd3582530031faa80f383f53a77'
     getclicky :
       site_id :
     mixpanel :
