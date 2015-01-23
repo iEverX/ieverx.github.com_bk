@@ -26,7 +26,7 @@ group: "navigation"
 
 ### 联系我？
 
-我的邮箱：g.everax(at)gmail.com，有时查的很勤，有时就少看  
+我的邮箱：ever(at)evercoding.net  
 新浪微博: [iEverX][weibo]，有事没事就去逛逛  
 github：[iEverX][github]，我的一些代码可以在这里找到  
 
