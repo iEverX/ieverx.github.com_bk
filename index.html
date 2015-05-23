@@ -57,7 +57,7 @@ tagline: 天外有天，山外有山
         var $postHeader = $('<header class="post-header"></header>').append($postTitle).append($meta);
         var $postContent = $('<div class="post-content"></div>');
         var $post = $('<section class="post-glance"></section>').append($postHeader).append($postContent);
-        var $postExtra = $('<div class="post-extra"></div>').append($('<a href="' + post.url + '#ds-comment">添加/产看评论</a>'));
+        var $postExtra = $('<div class="post-extra"></div>').append($('<a href="' + post.url + '#ds-comment">添加/查看评论</a>'));
         $('.posts').append($post).append($postExtra).append($('<div class="divider divider-dashed"></div>'));
         console.log(post.url + ' ' + '.post-content');
         $postContent.load(post.url + ' ' + '.post-content', function() {
