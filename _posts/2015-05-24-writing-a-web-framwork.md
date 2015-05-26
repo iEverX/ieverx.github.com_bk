@@ -25,17 +25,19 @@ A = type('A', (object,), {'t':1})
 
 Python中有个`__new__`方法，这个方法的目的控制一个对象的创建，通过重写`__new__`就可以对一个类型创建进行自定义。比如教程里的`ModelMetaclass`
 
-    class ModelMetaclass(type):
-        def __new__(mcs, name, bases, attrs):
-            if name == 'Model':
-                return super(ModelMetaclass, mcs).__new__(name, bases, attrs)
-            mapping = [x: y for x, y in attrs.items() if isinstance(y, Field)]
-            table = attrs['__table__']
-            real_attrs = {
-                '__mapping__': mapping,
-                '__table__': table,
-            }
-        return super(ModelMetaclass, mcs).__new__(name, bases, real_attrs)
+```python
+class ModelMetaclass(type):
+    def __new__(mcs, name, bases, attrs):
+        if name == 'Model':
+            return super(ModelMetaclass, mcs).__new__(name, bases, attrs)
+        mapping = [x: y for x, y in attrs.items() if isinstance(y, Field)]
+        table = attrs['__table__']
+        real_attrs = {
+            '__mapping__': mapping,
+            '__table__': table,
+        }
+    return super(ModelMetaclass, mcs).__new__(name, bases, real_attrs)
+```
 
 其中`mapping`是名称和类型的映射，通过这个元类，作为基类的`Model`，其创建过程保持不动，而实际的与数据库表相映射的类型，在创建时，其类变量均被放进`mapping`中。实际进行实例化时，给定的实际上是实例变量，其数据库属性可以在mapping中找到，也就是实现了数据库类型的和Python类型的映射。在ORM里，这一步是最重要的。此外，在赋值时，可以通过`mapping`来检验变量类型与定义时的数据库类型是否匹配。
 
