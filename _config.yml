@@ -9,6 +9,9 @@ paginate: 6
 description_length: 200
 timezone: Asia/Shanghai
 
+kramdown:
+  input: GFM
+
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
