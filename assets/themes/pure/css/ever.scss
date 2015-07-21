@@ -6,7 +6,6 @@
 
 html {
     font-family: "Microsoft Yahei", sans-serif, serif;
-    overflow-x: hidden;
 }
 
 a {
@@ -77,8 +76,8 @@ a {
 }
 
 #mainbody {
-    min-height: 100%;
-    margin-bottom: -4rem;
+    min-height: 85vh;
+    // margin-bottom: -4rem;
 }
 
 .post-glance,
@@ -139,8 +138,7 @@ a {
 
 .footer {
     text-align: center;
-    height: 2rem;
-    margin-top: 30px;
+    height: 5vh;
 }
 
 .divider {
@@ -274,6 +272,15 @@ a {
         margin: 5px;
     }
 
+    .post {
+        .post-title {
+            font-size: 1.6rem;
+        }
+    }
+    .content {
+        padding: .5rem 1rem 0;
+    }
+
     #menu-btn {
         margin: 5px 10px 5px 10px;
 
@@ -292,32 +299,6 @@ a {
             display: table;
             content: '';
             clear: both;
-        }
-    }
-
-    .nav {
-        display: none;
-        & > ul {
-            margin: 0;
-            padding: 0;
-            list-style: 0;
-            font-size: 1.3rem;
-
-            & > li {
-                padding: 0.2rem 0;
-
-                & > a {
-                    background: transparent;
-                    color: #fff;
-                    margin-top: 1rem;
-                    letter-spacing: 0.05rem;
-
-                    &:hover, &:focus {
-                        color: #ff7700;
-                        text-decoration: none;
-                    }
-                }
-            }
         }
     }
 }
