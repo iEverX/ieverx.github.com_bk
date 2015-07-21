@@ -1,3 +1,8 @@
+$fontFamily: Georgia, Cambria, "Microsoft YaHei", "Hiragino Sans GB",
+             "WenQuanYi Micro Hei", sans-serif;
+// $fontFamily: Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+$codeFont: consolas, 'Source Code Pro', monaco, monospace;
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -5,7 +10,7 @@
 }
 
 html {
-    font-family: "Microsoft Yahei", sans-serif, serif;
+    font-family: $fontFamily;
 }
 
 a {
@@ -110,7 +115,7 @@ a {
     }
 
     .post-content {
-        font-family: Georgia, "Cambria", serif;
+        font-family: $fontFamily;
         color: #444;
         line-height: 1.8rem;
     }
@@ -220,7 +225,7 @@ a {
 
 .tag_posts {
     .tag_title {
-        font-family: "Microsoft Yahei";
+        font-family: $fontFamily;
         font-size: 2rem;
         color: orange;
     }
@@ -332,10 +337,16 @@ code {
     font-weight: bold;
     color: purple;
     padding: 0 3px 0 3px;
+    font-family: $codeFont;
 }
 
 pre {
+    font-family: $codeFont;
     code {
         font-weight: normal;
     }
+}
+
+.pure-g [class *="pure-u"] {
+    font-family: $fontFamily;
 }
