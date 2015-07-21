@@ -2,6 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <title>{{ page.title }} | {{ site.title }}</title>
     <link rel="stylesheet" href="{{ ASSET_PATH }}/lib/pure/pure-min.css">
     <link rel="stylesheet" href="{{ ASSET_PATH }}/lib/pure/grids-responsive-min.css">
@@ -72,16 +73,14 @@
             </div>
             <div class="footer">
                 <p>&copy; {{ site.start_year }} <span id="now_year"></span> {{ site.author.name }}. </p>
-                <script type="text/javascript">
-                  var now_year = new Date().getFullYear();
-                  if (now_year != {{ site.start_year }}) {
-                      $('#now_year').html('- ' + now_year);
-                  }
-                </script>
             </div>
         </div>
     </div>
-    <script>
+    <script type="text/javascript">
+        var now_year = new Date().getFullYear();
+        if (now_year != {{ site.start_year }}) {
+            $('#now_year').html('- ' + now_year);
+        }
         $(function() {
             $('#toggle-nav').hide();
             $('#menu-btn').click(function() {

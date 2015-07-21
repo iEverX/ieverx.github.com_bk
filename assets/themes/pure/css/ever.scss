@@ -6,6 +6,7 @@
 
 html {
     font-family: "Microsoft Yahei", sans-serif, serif;
+    overflow-x: hidden;
 }
 
 a {
@@ -20,7 +21,6 @@ a {
 #layout {
     padding: 0;
     height: 100vh;
-    overflow-x: hidden;
 }
 
 .header {
