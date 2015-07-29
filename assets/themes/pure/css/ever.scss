@@ -118,6 +118,10 @@ a {
         font-family: $fontFamily;
         color: #444;
         line-height: 1.8rem;
+
+        img {
+            width: 100%;
+        }
     }
 }
 
