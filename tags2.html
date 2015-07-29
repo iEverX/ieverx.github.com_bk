@@ -13,7 +13,7 @@ theme: pure
     var tags = [
         {% for tag in site.tags %}
             {
-                tag: '{{ tag[0] }}',
+                text: '{{ tag[0] }}',
                 freq: {{ tag[1].size }},
                 posts: [
                     {% for post in tag[1] %}
