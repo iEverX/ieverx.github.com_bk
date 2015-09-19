@@ -82,13 +82,17 @@
         if (now_year != {{ site.start_year }}) {
             $('#now_year').html('- ' + now_year);
         }
+        function prettyPrintCode() {
+            // $('pre').addClass('prettyprint linenums').css('overflow-x', 'auto');
+            $('pre').addClass('prettyprint').css('overflow-x', 'auto').css('padding', '0 .5em');
+            window.prettyPrint && prettyPrint();
+        }
         $(function() {
             $('#toggle-nav').hide();
             $('#menu-btn').click(function() {
                 $('#toggle-nav').slideToggle();
             });
-            $('pre').addClass('prettyprint linenums').css('overflow-x', 'auto');
-            window.prettyPrint && prettyPrint();
+            prettyPrintCode();
         });
     </script>
     {% include ever/ga %}
