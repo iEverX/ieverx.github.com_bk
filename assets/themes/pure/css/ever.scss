@@ -112,6 +112,28 @@ a {
         color: #999;
         font-size: 90%;
         margin: 0;
+        margin-left: 5px;
+        margin-top: 10px;
+        
+        & > span {
+            margin-right: 10px;
+            
+            & > i {
+                color: #2F2E37;
+            }
+            
+            & > .tag {
+                background-color: #565561;
+                padding: 3px 5px;
+                color: white;
+                border-radius: 5px;
+                
+                &:hover {
+                    text-decoration: none;
+                    background-color: #454450;
+                }
+            }
+        }
     }
 
     .post-content {
