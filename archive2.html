@@ -1,0 +1,164 @@
+---
+layout: page
+title : "Archive"
+header : Post Archive
+group: navigation
+---
+{% include JB/setup %}
+
+<div class="archives">
+    
+    <ul class="grid-tabs pure-g">
+    </ul>
+    <div class="grid-content">
+    </div>
+
+</div>
+
+<script>
+
+$(function() {
+
+    var monthMap = {
+        '01': 'Jan.',
+        '02': 'Feb.',
+        '03': 'Mar.',
+        '04': 'Apr.',
+        '05': 'May',
+        '06': 'Jun.',
+        '07': 'July',
+        '08': 'Aug.',
+        '09': 'Sept.',
+        '10': 'Oct.',
+        '11': 'Nov.',
+        '12': 'Dec.'
+    };
+
+    var posts = [
+        {% for post in site.posts %}
+            {
+                title: '{{ post.title }}',
+                url: '{{ BASE_PATH }}{{ post.url }}',
+                meta: {
+                    tags: [
+                        {% for tag in post.tags %}
+                            {
+                                tag: '{{ tag }}',
+                                url: '{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}',
+                            },
+                        {% endfor %}
+                    ],
+                    author: '{{ site.author.name }}',
+                    date: '{{ post.date | date: "%Y-%m-%d" }}'
+                }
+
+            },
+        {% endfor %}
+    ];
+
+    posts = posts.reduce(function(memo, p) {
+        var year = p.meta.date.substring(0, 4);
+        var month = p.meta.date.substring(5, 7);
+        if  (year in memo) {
+            if (month in memo[year]) {
+                memo[year][month].push(p);
+            }
+            else {
+                memo[year][month] = [p];
+            }
+        }
+        else {
+            memo[year] = {};
+            memo[year][month] = [p];
+        }
+        return memo;
+    }, {});
+
+
+
+    var $gridTabs = mapOnObj(posts, function(ele, key) {
+        var $link = $('<a href="#' + key + '" class="grid-tab-link">' + key + '</a>');
+        var $tab = $('<li class="grid-tab pure-u"></li>').append($link);
+        return $tab;
+    });
+    $('.grid-tabs').html('').append($gridTabs);   
+
+    var $gridPanels = mapOnObj(posts, function(ele, key) {
+        var $panel = $('<div class="grid-panel" id="' + key + '"></div>');
+        $panel.append(generatePanel(ele));
+        return $panel;
+    });
+    $('.grid-content').html('').append($gridPanels);
+
+    $('.grid-panel').hide();
+    $('.accordion-item-content').hide();
+
+    $('.grid-tab-link').click(function() {
+        $('.grid-tab-link').removeClass('grid-tab-link-selected');
+        $(this).addClass('grid-tab-link-selected');
+        $('.grid-panel').hide();
+        var containerTag = $(this).attr('href');
+        $(containerTag).show();
+        var noContentDisplay = all($(containerTag + ' .accordion-item-content'), function(e) {
+            return $(e).css('display') == 'none';
+        });
+        if (noContentDisplay) {
+            $(containerTag + ' .accordion-item-content').eq(0).show();
+        }
+
+    });
+
+    $('.accordion-item-title').click(function() {
+        $(this).siblings().slideToggle('normal');
+    });
+
+
+    $('.grid-tab-link').eq(0).click();
+
+
+    function mapOnObj(obj, callback) {
+        var ret = [];
+        var keys = Object.keys(obj).sort(function(a, b) {
+            return a > b;
+        });
+        for (var idx in keys) {
+            ret.unshift(callback(obj[keys[idx]], keys[idx]));
+        }
+        return ret;
+    }
+
+    function generatePanel(ps) {
+        var $ul = $('<ul class="accordion"></ul>');
+        console.log(ps);
+        var $lis = mapOnObj(ps, function(ele, key) {
+            var $arts = $('<ul class="accordion-item-content"></ul>');
+            $arts.append(ele.map(function(art) {
+                return $('<li>' + art.meta.date + ' - <a href="' + art.url + '">' + art.title + '</a></li>');
+            }));
+            return $('<li></li>').append($('<div class="accordion-item-title">' + monthMap[key] + '</div>')).append($arts);
+        });
+        $ul.append($lis);
+        return $ul;
+    }
+
+    function any(arrLike, anyFunc) {
+        for (var i = 0; i < arrLike.length; ++i) {
+            if (anyFunc(arrLike[i])) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function all(arrLike, allFunc) {
+        for (var i = 0; i < arrLike.length; ++i) {
+            if (!allFunc(arrLike[i])) {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+});
+
+</script>
