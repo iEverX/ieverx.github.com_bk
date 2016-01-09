@@ -9,14 +9,14 @@ tagline: 天外有天，山外有山
     {% assign post = site.posts.first %}
     <section class="post-glance">
         <header class="post-header">
-            <h2 class="post-title"><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
+            <h2 class="post-title"><a href="{{ post.url | prepand: site.baseurl }}">{{ post.title }}</a></h2>
             <div class="post-meta">
                 <span>
                     <i class="fa fa-calendar"></i> {{ post.date | date: '%Y-%m-%d' }}
                 </span>
                 {% if post.tags != empty %}
                     <span>
-                        <i class="fa fa-tags"></i> {% for tag in post.tags %}<a class="tag" href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}" rel="nofollow">{{ tag }}</a> {% endfor %}
+                        <i class="fa fa-tags"></i> {% for tag in post.tags %}<a class="tag" href="{{ site.tags_path | prepend: site.baseurl }}#{{ tag }}" rel="nofollow">{{ tag }}</a> {% endfor %}
                     </span>
                 {% endif %}
             </div>
