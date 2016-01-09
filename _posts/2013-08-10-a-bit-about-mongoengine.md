@@ -5,7 +5,6 @@ tagline: "A Bit About Mongoengine"
 description: "使用MongoDB以及MongoEngine的一些想法"
 tags: [MongoDB, Python]
 ---
-{% include JB/setup %}
 
 MongoEngine之于MongoDB来说，就类似于SQLAlchemy之于关系型数据库，是ODM。许多人对于MongoDB之类的文档型数据库，不愿意用ODM，认为会拖累速度，而且似乎是又回到了关系型数据库。对于此，我只能说，我是支持使用ODM的，因为我确实感觉到ODM给我的编程提供了许多便利。
 

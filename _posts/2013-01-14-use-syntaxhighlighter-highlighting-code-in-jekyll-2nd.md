@@ -5,7 +5,6 @@ tagline: "Use SyntaxHighlighter Highlighting Code In Jekyll 2nd"
 description: "在Jekyll中利用SyntaxHighlighter对文章中的代码快进行高亮"
 tags: ["Jekyll", "SyntaxHighlighter", 代码高亮]
 ---
-{% include JB/setup %}
 
 之前有一篇博客是关于在Jekyll中利用SyntaxHighlighter去高亮代码的。不过那篇博客中的方法需要每次都加载所有的js文件，加载速度比较慢。其实，可以利用js动态加载js来实现对于不同的语言加载不同的语法分析文件，从而提高js文件的加载速度。废话不多说了，上代码
 

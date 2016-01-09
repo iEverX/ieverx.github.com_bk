@@ -5,7 +5,6 @@ tagline: "Wrting A Web Framework"
 description: ""
 tags: [Python, Web Framework]
 ---
-{% include JB/setup %}
 
 在知乎上偶然看到了廖雪峰老师的网站上的Python教程，[Python实战][]，目的是从头开始写一个博客。这个从头开始是，自己造轮子，包括ORM、Web框架。对于写好框架之后的写博客等前端部分，我没有什么兴趣，而最前面的几个，都是我不清楚具体实现的，跟着教程一步一步往下走。说明一点，教程用的Python2，我用的是Python3，所以有些地方是略有区别的。
 

@@ -5,7 +5,6 @@ tagline: "A Sublime Text Plugin"
 description: ""
 tags: ["Sublime Text", "Sublime Text 2", "插件"]
 ---
-{% include JB/setup %}
 
 起因是，自己写Python基本上使用sublime text 2。但是，文件头部的代码
 

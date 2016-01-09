@@ -5,7 +5,6 @@ tagline: "Fickle Summer Vacation, Fickle Me"
 description: "暑假结束之时对自己的暑假规划、表现所做的一些反思"
 tags: ["总结", "反思", "暑假"]
 ---
-{% include JB/setup %}
 
 没有几天，暑假就结束了。从6月26日正式放假以来，感觉自己在放假之前画的大饼完全没有实现，可以说，整个暑假是一事无成。个人感觉都是**浮躁**惹的祸。
 

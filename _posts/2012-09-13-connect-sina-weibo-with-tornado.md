@@ -5,7 +5,6 @@ tagline: "Connect Sina Weibo With Tornado"
 description: "利用Tornado框架连接新浪微博，发送邮件"
 tags: ["Python", "web开发", "Tornado", "新浪微博"]
 ---
-{% include JB/setup %}
 
 前几天心血来潮，稍稍看了一下Tornado框架，感觉这个框架和web.py很像（因为本来Tornado就是在web.py的基础上修改而来的）。
 

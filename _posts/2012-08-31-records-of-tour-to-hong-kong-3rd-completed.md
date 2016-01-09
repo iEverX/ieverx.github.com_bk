@@ -5,7 +5,6 @@ tagline: "Records Of Tour To Hong Kong 3rd (completed)"
 description: "暑假在香港的最后两天的行程以及对于香港的一些印象"
 tags: ["香港", "旅游", "暑假", "印象"]
 ---
-{% include JB/setup %}
 
 回到了北京，香港之旅正式结束了。这一趟，身在香港的时间，是四天。前两天的情况我已经在前两篇博客中说过了，这篇就主要说说后两天的活动，还有自己对应香港之行的一些感觉。
 

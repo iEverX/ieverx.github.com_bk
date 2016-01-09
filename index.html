@@ -3,7 +3,6 @@ layout: default
 title: 天外天
 tagline: 天外有天，山外有山
 ---
-{% include JB/setup %}
 
 <div class="posts">
     {% assign post = site.posts.first %}
@@ -44,7 +43,7 @@ tagline: 天外有天，山外有山
                         {% for tag in post.tags %}
                             {
                                 tag: '{{ tag }}',
-                                url: '{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref',
+                                url: '{{ site.tags_path | prepand: site.baseurl }}#{{ tag }}-ref',
                             },
                         {% endfor %}
                     ],

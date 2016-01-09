@@ -5,7 +5,6 @@ tagline: "Implement Haskell Map Function In Cpp"
 description: ""
 tags: [Haskell, C++]
 ---
-{% include JB/setup %}
 
 C++11中引入了lambda，类似如下的语法
 

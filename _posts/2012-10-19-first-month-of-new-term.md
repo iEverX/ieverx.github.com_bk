@@ -5,7 +5,6 @@ tagline: "First Month Of New Term"
 description: ""
 tags: ["总结", "新学期"]
 ---
-{% include JB/setup %}
 
 已经过了午夜，算是19号了。算来，从上个月10好开学，也有一个多月了。正好博客也一个月没更新了，正好写一篇。
 

@@ -5,7 +5,6 @@ tagline: "Install Gitlab"
 description: "在Linux下安装GitLab"
 tags: [git, GitLab, Linux]
 ---
-{% include JB/setup %}
 
 在V2EX上面看了一个如何管理自己的代码的帖子，里面有个回答是使用gitlab，于是搜了一下。。可以这么说，gitlab是开源的github，可以在自己的电脑上搭一个私人的git托管服务，相当不错。对于自己来说，其实就是折腾啦，可以不用把所有的代码都扔到github上面，但是有个不好就是在自己的机器上面，一旦系统挂了，代码就没了。。
 

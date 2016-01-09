@@ -5,7 +5,6 @@ tagline: "Solution Of Django Session Invalid On Apache"
 description: ""
 tags: [Django, Apache, SVN]
 ---
-{% include JB/setup %}
 
 实验室项目，用Django写的Web端，需要登陆功能，因为Django自带的登陆比较庞大，自己写了一个了，没有权限等一些列东西，比较easy的，其中，require_signin这个装饰器是这样的
 

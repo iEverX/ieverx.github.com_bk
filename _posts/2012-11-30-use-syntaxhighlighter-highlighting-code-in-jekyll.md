@@ -5,7 +5,6 @@ tagline: "Use SyntaxHighlighter Highlighting Code In Jekyll"
 description: "在Jekyll中利用SyntaxHighlighter对文章中的代码快进行高亮"
 tags: ["Jekyll", "SyntaxHighlighter", 代码高亮]
 ---
-{% include JB/setup %}
 
 前几天把博客里的代码高亮改成[SyntaxHighligher][]了，感觉好了很多，看着也舒服，关键是复制代码的时候，行号连着代码在一行复制了。主要参考了官网给的这个链接[Adding a Syntax Highlighter to your Blogger blog][Blogger]。Jekyll的灵活性应该比Blogger更大，而且直接贴改代码，所以对于Jekyll这个方法是合适的。下面是具体的过程
 

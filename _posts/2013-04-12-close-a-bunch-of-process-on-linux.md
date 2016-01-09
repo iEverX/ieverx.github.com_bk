@@ -5,7 +5,6 @@ tagline: "Close A Bunch Of Process On Linux"
 description: ""
 tags: [Linux, shell]
 ---
-{% include JB/setup %}
 
 很多时候，需要同时关闭一系列的有着相同的关键字的进程，比如说，开着十多个网页的chrome死掉了这种情况。。
 

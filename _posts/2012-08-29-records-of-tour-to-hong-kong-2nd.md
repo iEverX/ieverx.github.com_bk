@@ -5,7 +5,6 @@ tagline: "Records Of Tour To Hong Kong 2nd"
 description: "2012年暑假，随访学团赴香港第二天，在GAMA协会听吕先生演讲、游玩迪士尼乐园"
 tags: ["香港", "旅游", "暑假"]
 ---
-{% include JB/setup %}
 
 ## GAMA协会吕广基先生演讲
 

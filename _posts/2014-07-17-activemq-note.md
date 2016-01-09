@@ -5,8 +5,6 @@ tagline: "ActiveMQ Note"
 description: ""
 tags: [ActiveMQ, 消息队列, 笔记]
 ---
-{% include JB/setup %}
-
 
 实验室的项目需要使用ActiveMQ，目的是为了进行一些耗时间的处理时，不会阻塞程序的主流程。调研ActiveMQ的工作就交给我来做了。
 

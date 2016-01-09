@@ -5,7 +5,6 @@ tagline: "Compiling Linux Kernel"
 description: "Linux内核编译的步骤以及一些相关问题的解决办法"
 tags: ["Linux", "内核", "编译源码"]
 ---
-{% include JB/setup %}
 
 这几天实验室交给任务，编译linux内核。然后就开始做了。
 
