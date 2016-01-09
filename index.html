@@ -43,7 +43,7 @@ tagline: 天外有天，山外有山
                         {% for tag in post.tags %}
                             {
                                 tag: '{{ tag }}',
-                                url: '{{ site.tags_path | prepand: site.baseurl }}#{{ tag }}-ref',
+                                url: '{{ site.tags_path | prepand: site.baseurl }}#{{ tag }}',
                             },
                         {% endfor %}
                     ],
