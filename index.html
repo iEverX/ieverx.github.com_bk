@@ -77,11 +77,15 @@ tagline: 天外有天，山外有山
         });
     }
     $(function() {
-        $(window).scroll(function() {
+        function checkAndAdd() {
             if ($(window).scrollTop() + $(window).height() > $(document).height() - 50 && posts.length > 0) {
                 var post = posts.shift();
                 putPost(post);
             }
+        }
+        checkAndAdd();
+        $(window).scroll(function() {
+            checkAndAdd();
         });
     });
 
