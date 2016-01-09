@@ -1,0 +1,21 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ site.description }}">
+
+    <link rel="stylesheet" href="{{ '/static/lib/pure/pure-min.css' | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/static/lib/pure/grids-responsive-min.css' | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/static/css/main.css' | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/static/lib/google-code-prettify/light.css' | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/static/lib/font-awesome/css/font-awesome.min.css' | prepend: site.baseurl }}">
+    
+    <script src="{{ '/static/lib/jquery/jquery-1.11.1.min.js' | prepend: site.baseurl }}"></script>
+    <script src="{{ '/static/lib/google-code-prettify/prettify.js' | prepend: site.baseurl }}"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+</head>

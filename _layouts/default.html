@@ -1,6 +1,74 @@
----
-theme :
-  name : pure
----
-{% include JB/setup %}
-{% include themes/pure/default.html %}
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+<body>
+    <div style="overflow-x:hidden;display"></div>
+    <div id="layout" class="pure-g">
+        <div class="sidebar pure-u-1 pure-u-md-1-4 pure-u-lg-1-5">
+            <div class="header">
+                <img src="{{ '/static/image/avatar.png' | prepend: site.baseurl }}" alt="" class="pure-img avatar screen-md">
+                <hgroup class="screen-md">
+                    <h1 class="brand-title">{{ site.title }}</h1>
+                    <h2 class="brand-tagline">{{ site.tagline }}</h2>
+                </hgroup>
+                <nav class="nav screen-md">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/archive.html">Archive</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/messages.html">Messages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/links.html">Links</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="toggle screen-mobile" id="menu-btn">
+                    <h1 class="brand-title">{{ site.title }}</h1>
+                    <i class="fa fa-list-ul fa-2x"></i>
+                </div>
+                <nav class="nav screen-mobile" id="toggle-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/archive.html">Archive</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/messages.html">Messages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/links.html">Links</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="content pure-u-1 pure-u-md-3-4 pure-u-lg-4-5">
+            <div id="mainbody">
+                {{ content }}
+            </div>
+            <div class="footer">
+                <p>&copy; {{ site.start_year }} <span id="now_year"></span> {{ site.author.name }}. </p>
+            </div>
+        </div>
+    </div>
+
+    {% include scripts.html %}
+
+  </body>
+
+</html>

@@ -1,5 +1,25 @@
 ---
 layout: default
 ---
-{% include JB/setup %}
-{% include themes/pure/post.html %}
+<section class="post">
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <div class="post-meta">
+            <span>
+                <i class="fa fa-calendar"></i> {{ page.date | date: '%Y-%m-%d' }}
+            </span>
+            {% if page.tags != empty %}
+                <span>
+                    <i class="fa fa-tags"> {% for tag in page.tags %}</i> <a class="tag" href="{{ site.tags_path }}#{{ tag }}" rel="nofollow">{{ tag }}</a> {% endfor %}
+                </span>
+            {% endif %}
+        </div>
+    </header>
+    <div class="post-content">
+        {{ content }}
+    </div>
+</section>
+<section>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="本文采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可"><img src="{{ '/static/image/lisence.png' | prepend: site.baseurl }}" alt="许可协议" rel="licence"/></a>
+</section>
+{% include component/duoshuo %}

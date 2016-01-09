@@ -1,6 +1,0 @@
-<ul class="inline">
-<li>Tags: </li>
-{% for tag in post.tags %} 
-    <li><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }}</a></li>
-{% endfor %}
-</ul>
