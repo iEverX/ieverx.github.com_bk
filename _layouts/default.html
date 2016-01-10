@@ -16,25 +16,31 @@
                 <nav class="nav screen-md">
                     <ul class="nav-list">
                         <li class="nav-item">
-                            <a href="/index.html">Home</a>
+                            <a href="/index.html"><i class="fa fa-home"></i> Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/archive.html">Archive</a>
+                            <a href="/archive.html"><i class="fa fa-calendar-o"></i> Archive</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/about.html">About</a>
+                            <a href="/about.html"><i class="fa fa-info-circle"></i> About</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/messages.html">Messages</a>
+                            <a href="/messages.html"><i class="fa fa-comments"></i> Messages</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/links.html">Links</a>
+                            <a href="/links.html"><i class="fa fa-link"></i> Links</a>
                         </li>
                     </ul>
                 </nav>
+                <div class="social-link screen-md">
+                    <a href="https://github.com/iEverX" target="_blank"><i class="fa fa-github"></i> Github</a>
+                    <a href="http://weibo.com/ieverx" target="_blank"><i class="fa fa-weibo"></i> Weibo</a>
+                    <a href="https://twitter.com/ieverx" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>
+                    <a href="{{ site.feed_path | prepend: site.baseurl }}" target="_blank"><i class="fa fa-rss"></i> RSS</a>
+                </div>
                 <div class="toggle screen-mobile" id="menu-btn">
                     <h1 class="brand-title">{{ site.title }}</h1>
-                    <i class="fa fa-list-ul fa-2x"></i>
+                    <i class="fa fa-reorder fa-2x"></i>
                 </div>
                 <nav class="nav screen-mobile" id="toggle-nav">
                     <ul class="nav-list">

@@ -15,6 +15,7 @@ permalink: /:year/:month/:day/:title
 timezone: Asia/Shanghai
 
 tags_path: /tags.html
+feed_path: /feed.xml
 
 markdown: kramdown
 kramdown:

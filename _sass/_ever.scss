@@ -19,6 +19,7 @@ a {
 
     &:hover, &:focus {
         text-decoration: underline;
+        outline: none;
     }
 }
 
@@ -51,20 +52,27 @@ a {
 }
 
 .nav {
+    padding: 0 5%;
     & > ul {
         margin: 0;
         padding: 0;
         list-style: 0;
         font-size: 1.3rem;
+        text-align: left;
 
         & > li {
-            padding: 0.2rem 0;
+            padding: 0.1rem 0;
 
             & > a {
                 background: transparent;
                 color: #fff;
-                margin-top: 1rem;
+                // margin-top: 1rem;
                 letter-spacing: 0.05rem;
+                display: block;
+
+                & > i {
+                    margin-right: 15px;
+                }
 
                 &:hover, &:focus {
                     color: #ff7700;
@@ -378,4 +386,27 @@ pre {
 
 .pure-g [class *="pure-u"] {
     font-family: $fontFamily;
+}
+
+.social-link {
+    padding: 20px 5% 0 5%;
+    text-align: left;
+    
+    & > a {
+        color: white;
+        width: 46%;
+        padding: 3px;
+        border-radius: 3px;
+        display: inline-block;
+        
+        &:nth-child(2n):after {
+            content: ' ';
+            display: block;
+        }
+        
+        &:hover,&:focus {
+            text-decoration: none;
+            background-color: rgb(100,101,110);
+        }
+    }    
 }
