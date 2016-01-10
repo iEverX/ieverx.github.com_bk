@@ -1,16 +1,15 @@
-# Site settings
 title: 天外天
 tagline: 天外有天，山外有山
 description: 一个程序员的技术和生活
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: http://blog.evercoding.net # the base hostname & protocol for your site
-start_year: 2012
 
 author:
   name: Ever
   email: g.everax@gmail.com
   github: iEverX
   twiter: ieverx
+start_year: 2012
 
 permalink: /:year/:month/:day/:title
 timezone: Asia/Shanghai
@@ -28,4 +27,6 @@ service:
     tracking_id : UA-54098391-1
   baidu:
     num: 286a0fd3582530031faa80f383f53a77
+
+exclude: [README.md, CNAME]
   
