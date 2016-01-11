@@ -276,7 +276,7 @@ a {
     }
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 64rem) {
     .screen-mobile {
         display: none !important;
     }
@@ -297,13 +297,13 @@ a {
     }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 80em) {
     .content {
         margin-left: 20%;
     }
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 64rem) {
     .screen-md {
         display: none !important;
     }

@@ -60,7 +60,7 @@ group: navigation
         top: auto;
     }
     
-    @media (min-width: 64em) {
+    @media (min-width: 48em) {
         .timeline-container:before {
             left: 50%;
         }
@@ -93,7 +93,11 @@ group: navigation
         }
     }
     
-    @media (max-width: 64em) {
+    @media (max-width: 48em) {
+        .timeline-container {
+            padding-left: 15px;
+        }
+        
         .timeline-block:before {
             margin-left: -18px;
         }
