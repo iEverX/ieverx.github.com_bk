@@ -70,7 +70,7 @@ group: navigation
         }
         
         .timeline-content {
-            width: 47%;
+            width: 46.5%;
         }
         
         .timeline-block:nth-child(even) .timeline-content {
@@ -123,7 +123,16 @@ group: navigation
     }
     
     .tc-tags {
+        margin-top: 2px;
         font-size: .8rem;
+    }
+    
+    .tc-tags a {
+        display: inline-block;
+        padding: 1px 5px;
+        background-color: #627281;
+        color: white;
+        border-radius: 3px;
     }
     
 </style>
@@ -135,7 +144,6 @@ group: navigation
                 <div class="tc-date">{{ post.date | date: "%Y-%m-%d" }}</div>
                 <div class="tc-title"><a href="{{ post.url | prepand: site.baseurl }}">{{ post.title }}</a></div>
                 <div class="tc-tags">
-                    <i class="fa fa-tags"></i>
                     {% for tag in post.tags %}
                         <a href="{{ site.tags_path | prepand: site.baseurl }}#{{ tag }}">{{ tag }}</a>
                     {% endfor %}
