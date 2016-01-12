@@ -25,7 +25,10 @@ a {
 
 #layout {
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
+    background-color: $content-bg-color;
+    margin:auto;
+    max-width:80em
 }
 
 .header {
@@ -177,6 +180,7 @@ a {
         padding: 0;
         color: silver;
         text-transform: uppercase;
+        font-weight: bold;
     }
 }
 
@@ -303,7 +307,10 @@ a {
 
 @media (min-width: 80em) {
     .content {
-        margin-left: 20%;
+        margin-left: 25%;
+    }
+    .sidebar {
+        width: 20em;
     }
 }
 
