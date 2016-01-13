@@ -14,6 +14,12 @@
     
     <script src="{{ '/static/lib/jquery/jquery-1.11.1.min.js' | prepend: site.baseurl }}"></script>
     <script src="{{ '/static/lib/google-code-prettify/prettify.js' | prepend: site.baseurl }}"></script>
+    {% for lang in site.posts[0].lang %}
+        <script src="{{ site.baseurl }}/static/lib/google-code-prettify/lang/lang-{{ lang }}.js"></script>
+    {% endfor %}
+    {% for lang in page.lang %}
+        <script src="{{ site.baseurl }}/static/lib/google-code-prettify/lang/lang-{{ lang }}.js"></script>
+    {% endfor %}
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">

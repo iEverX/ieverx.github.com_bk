@@ -54,7 +54,6 @@ tagline: 天外有天，山外有山
             },
         {% endfor %}
     ];
-
     function putPost(post) {
         var $postTitle = $('<h2 class="post-title"><a href="' + post.url + '">' + post.title + '</a></h2>');
         var tags = post.meta.tags.reduce(function(p, c) {
@@ -70,8 +69,6 @@ tagline: 天外有天，山外有山
         var $post = $('<section class="post-glance"></section>').append($postHeader).append($postContent);
         var $postExtra = $('<div class="post-extra"></div>').append($('<a href="' + post.url + '#ds-comment">添加/查看评论</a>'));
         $('.posts').append($post).append($postExtra);
-        // $('.posts').append($('<div class="divider divider-dashed"></div>'));
-        console.log(post.url + ' ' + '.post-content');
         $postContent.load(post.url + ' ' + '.post-content', function() {
             prettyPrintCode();
         });
@@ -91,7 +88,4 @@ tagline: 天外有天，山外有山
             checkAndAdd();
         })
     });
-
-    
-
 </script>
