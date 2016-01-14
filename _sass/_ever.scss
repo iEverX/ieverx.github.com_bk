@@ -330,8 +330,8 @@ a {
         }
     }
     .content {
-        padding: 0;
-        margin: .5rem 1rem 0;
+        padding: .5rem 1rem 0;
+        margin: 0;
     }
 
     #menu-btn {
@@ -390,6 +390,7 @@ code {
 
 pre {
     font-family: $codeFont;
+    padding: 0 .5rem;
     code {
         font-weight: normal;
         padding: 0;
