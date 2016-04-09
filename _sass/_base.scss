@@ -171,3 +171,8 @@ blockquote {
         }
     }
 }
+
+::selection {
+    background-color: $siteColor;
+    color: #fff;
+}
