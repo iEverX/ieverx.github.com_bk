@@ -28,7 +28,11 @@ a {
     min-height: 100vh;
     background-color: $content-bg-color;
     margin:auto;
-    max-width:80em
+    max-width:64em
+}
+
+#header {
+    text-align: center;
 }
 
 .header {
@@ -59,33 +63,38 @@ a {
 }
 
 .nav {
-    padding: 0 5%;
     & > ul {
-        margin: 0;
-        padding: 0;
-        list-style: 0;
-        font-size: 1.3rem;
-        text-align: left;
-
         & > li {
-            padding: 0.1rem 0;
-
+            
+            display: inline-block;
+            margin: 0 5px;
+            
             & > a {
-                background: transparent;
-                color: #fff;
-                // margin-top: 1rem;
-                letter-spacing: 0.05rem;
+                color: #777;
                 display: block;
-
-                & > i {
-                    margin-right: 15px;
-                }
-
-                &:hover, &:focus {
-                    color: #ff7700;
+                transition: 0.2s;
+                
+                &:hover {
+                    color: $siteColor;
                     text-decoration: none;
                 }
+                
+                i {
+                    font-size: 1.4em;
+                    font-weight: normal;
+                }
             }
+        }
+    }
+}
+
+.screen-mobile {
+    & > ul {
+        text-align: left;
+        margin-left: 0;
+        & > li {
+            display: block;
+            margin: 5px 0;
         }
     }
 }
@@ -110,11 +119,14 @@ a {
         margin-top: .3rem;
 
         & > a {
-            color: #333;
+            color: #777;
+            transition: 0.2s;
         }
 
         & > a:hover, & > a:focus {
-            color: #444;
+            // color: #444;
+            color: #1abc9c;
+            text-decoration: none;
         }
 
         & > span {
@@ -159,6 +171,20 @@ a {
         
         img {
             width: 100%;
+        }
+        
+        $titleColor: $siteColor;
+        & > h2:before {
+            content: "# ";
+            color: $titleColor;
+        }
+        & > h3:before {
+            content: "## ";
+            color: $titleColor;
+        }
+        & > h4:before {
+            content: "### ";
+            color: $titleColor;
         }
     }
 }
@@ -292,7 +318,7 @@ a {
 
     .content {
         padding: 2rem 3rem 0;
-        margin-left: 25%;
+        // margin-left: 25%;
     }
 
     .header {
@@ -307,9 +333,9 @@ a {
 }
 
 @media (min-width: 80em) {
-    .content {
-        margin-left: 25%;
-    }
+    // .content {
+    //     margin-left: 25%;
+    // }
     .sidebar {
         width: 20em;
     }
