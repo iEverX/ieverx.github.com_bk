@@ -6,56 +6,63 @@
 <body>
     <div style="overflow-x:hidden;display"></div>
     <div id="layout" class="pure-g">
-        <div class="content pure-u-1">
+        <div class="pure-u-1">
             <div id="header">
-                <div class="toggle screen-mobile" id="menu-btn">
-                    <i class="fa fa-reorder"></i>
+                <div class="content">
+                    <div class="toggle screen-mobile" id="menu-btn">
+                        <i class="fa fa-reorder"></i>
+                    </div>
+                    <nav class="nav screen-mobile" id="toggle-nav">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="/"><i class="fa fa-home"></i> Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/archive"><i class="fa fa-calendar-o"></i> Archive</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/about"><i class="fa fa-info-circle"></i> About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/messages"><i class="fa fa-comments"></i> Messages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/links"><i class="fa fa-link"></i> Links</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <h1 class="brand">{{ site.title }}</h1>
+                    <nav class="nav screen-md">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="/"><i class="fa fa-home"></i><br /> Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/archive"><i class="fa fa-calendar-o"></i><br /> Archive</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/about"><i class="fa fa-info-circle"></i><br /> About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/messages"><i class="fa fa-comments"></i><br /> Messages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/links"><i class="fa fa-link"></i><br /> Links</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav class="nav screen-mobile" id="toggle-nav">
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="/"><i class="fa fa-home"></i> Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/archive"><i class="fa fa-calendar-o"></i> Archive</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/about"><i class="fa fa-info-circle"></i> About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/messages"><i class="fa fa-comments"></i> Messages</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/links"><i class="fa fa-link"></i> Links</a>
-                        </li>
-                    </ul>
-                </nav>
-                <h1 class="brand">{{ site.title }}</h1>
-                <nav class="nav screen-md">
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="/"><i class="fa fa-home"></i><br /> Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/archive"><i class="fa fa-calendar-o"></i><br /> Archive</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/about"><i class="fa fa-info-circle"></i><br /> About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/messages"><i class="fa fa-comments"></i><br /> Messages</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/links"><i class="fa fa-link"></i><br /> Links</a>
-                        </li>
-                    </ul>
-                </nav>
+
             </div>
             <div id="mainbody">
-                {{ content }}
+                <div class="content">
+                    {{ content }}
+                </div>
             </div>
-            <div class="footer">
-                <p>&copy; {{ site.start_year }} <span id="now_year"></span> {{ site.author.name }}. </p>
+            <div id="footer">
+                <div class="content">
+                    <p>&copy; {{ site.start_year }} <span id="now_year"></span> {{ site.author.name }}. </p>
+                </div>
             </div>
         </div>
     </div>
