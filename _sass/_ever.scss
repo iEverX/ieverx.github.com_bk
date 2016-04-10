@@ -65,6 +65,20 @@ a {
     }
 }
 
+.brand {
+    a {
+        color: white;
+        &:hover {
+            text-decoration: none;
+            color: white;
+        }
+        &:focus {
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
 .screen-mobile {
     & > ul {
         text-align: left;
