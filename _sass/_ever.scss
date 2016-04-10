@@ -368,9 +368,10 @@ a {
 
 code {
     font-weight: bold;
-    color: purple;
+    color: darken($siteColor, 5);
     padding: 0 3px 0 3px;
     font-family: $codeFont;
+    font-style: italic;
 }
 
 pre {
@@ -379,6 +380,7 @@ pre {
     code {
         font-weight: normal;
         padding: 0;
+        font-style: normal;
     }
 }
 
