@@ -97,6 +97,7 @@ unexpected "g"
 可以看到，parser会*消费*`abcde`中的任意一个字符。这里我们可以用区间泪简化，比如可以使用`Parsec.oneOf ['a'..'z']`来匹配任意小写字母。
 
 Parsec提供了规则来完成上面的目的，比如，`Parsec.anyChar`会消费任何字符：
+
 ```haskell
 ghci> parse Parsec.anyChar "blahblah"
 Right 'b'
