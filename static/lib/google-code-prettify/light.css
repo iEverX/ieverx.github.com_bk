@@ -2,27 +2,20 @@
 pre.prettyprint {
   display: block;
   background-color: rgb(240,248,248);
-  /*border-top: 1px solid #777;
-  border-bottom: 1px solid #777;
-  margin: auto -3rem;
-  padding: 0 3rem; */
 }
+
 pre .nocode { background-color: none; color: #000 }
-pre .str { color: #944f10
-} /* string  - pink */
-pre .kwd { color: #337; font-weight: bold }
-pre .com { color: #aaa } /* comment - skyblue */
-pre .typ { color: #984538 } /* type    - lightgreen */
-pre .lit { color: #555599
-} /* literal - darkred */
-pre .pun { color: #333 }    /* punctuation */
-pre .pln { color: #444444
-}    /* plaintext */
-pre .tag { color: rgb(143, 58, 2); font-weight: bold } /* html/xml tag    - lightyellow */
-pre .atn { color: #05748c; font-weight: bold } /* attribute name  - khaki */
-pre .atv { color: rgb(27, 99, 16)
-} /* attribute value - pink */
-pre .dec { color: #337 } /* decimal         - lightgreen */
+pre .str {color: #FF5722;}
+pre .kwd {color: #1A77BC; font-weight: normal;}
+pre .com { color: #aaa }
+pre .pun {color: #795548;}
+pre .typ {color: #21AB54;}
+pre .pln {color: #444;}
+pre .lit {color: #03B703;}
+pre .tag { color: rgb(143, 58, 2); font-weight: bold }
+pre .atn { color: #05748c; font-weight: bold }
+pre .atv { color: rgb(27, 99, 16) }
+pre .dec { color: #337 }
 
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums { margin-left: .4rem; margin-top: 0; margin-bottom: 0; color: #555 } /* IE indents via margin-left */
