@@ -1,26 +1,52 @@
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{{ site.description }}">
+   
+    {% if jekyll.environment == 'production' %}
+        <link href="//cdn.bootcss.com/pure/0.5.0/pure-min.css" rel="stylesheet">
+        <link href="//cdn.bootcss.com/pure/0.5.0/grids-responsive-min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ '/static/css/main.css' | prepend: site.baseurl }}">
+        <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ '/static/lib/google-code-prettify/light.css' | prepend: site.baseurl }}">
+        
+        <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+        <script src="//cdn.bootcss.com/prettify/r298/prettify.min.js"></script>
+        {% if page.role == 'index' %}
+            {% for lang in site.posts[0].lang %}
+                <script src="//cdn.bootcss.com/prettify/r298/lang-{{ lang }}.min.js"></script>
+            {% endfor %}
+        {% endif %}
+        {% for lang in page.lang %}
+            <script src="//cdn.bootcss.com/prettify/r298/lang-{{ lang }}.min.js"></script>
+        {% endfor %}
 
-    <link rel="stylesheet" href="{{ '/static/lib/pure/pure-min.css' | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ '/static/lib/pure/grids-responsive-min.css' | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ '/static/css/main.css' | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ '/static/lib/google-code-prettify/light.css' | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ '/static/lib/font-awesome/css/font-awesome.min.css' | prepend: site.baseurl }}">
+    {% else %}
+        <link rel="stylesheet" href="{{ '/static/lib/pure/pure-min.css' | prepend: site.baseurl }}">
+        <link rel="stylesheet" href="{{ '/static/lib/pure/grids-responsive-min.css' | prepend: site.baseurl }}">
+        <link rel="stylesheet" href="{{ '/static/css/main.css' | prepend: site.baseurl }}">
+        <link rel="stylesheet" href="{{ '/static/lib/google-code-prettify/light.css' | prepend: site.baseurl }}">
+        <link rel="stylesheet" href="{{ '/static/lib/font-awesome/css/font-awesome.min.css' | prepend: site.baseurl }}">
+        
+        <script src="{{ '/static/lib/jquery/jquery-2.2.1.min.js' | prepend: site.baseurl }}"></script>
+        <script src="{{ '/static/lib/google-code-prettify/prettify.js' | prepend: site.baseurl }}"></script>
+        {% if page.role == 'index' %}
+            {% for lang in site.posts[0].lang %}
+                <script src="{{ site.baseurl }}/static/lib/google-code-prettify/lang/lang-{{ lang }}.js"></script>
+            {% endfor %}
+        {% endif %}
+        {% for lang in page.lang %}
+            <script src="{{ site.baseurl }}/static/lib/google-code-prettify/lang/lang-{{ lang }}.js"></script>
+        {% endfor %}
+
+    {% endif %}
     
-    <script src="{{ '/static/lib/jquery/jquery-1.11.1.min.js' | prepend: site.baseurl }}"></script>
-    <script src="{{ '/static/lib/google-code-prettify/prettify.js' | prepend: site.baseurl }}"></script>
-    {% for lang in site.posts[0].lang %}
-        <script src="{{ site.baseurl }}/static/lib/google-code-prettify/lang/lang-{{ lang }}.js"></script>
-    {% endfor %}
-    {% for lang in page.lang %}
-        <script src="{{ site.baseurl }}/static/lib/google-code-prettify/lang/lang-{{ lang }}.js"></script>
-    {% endfor %}
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    {% if page.math %}
+        <script type="text/javascript" async src="http://cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    {% endif %}
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     {% include component/baidu_tongji %}

@@ -2,6 +2,7 @@
 layout: default
 title: 天外天
 tagline: 天外有天，山外有山
+role: index
 ---
 
 <div class="posts">
@@ -49,12 +50,24 @@ tagline: 天外有天，山外有山
                     ],
                     author: '{{ site.author.name }}',
                     date: '{{ post.date | date: "%Y-%m-%d" }}'
+                    {% if post.math %}
+                    ,
+                    math: true
+                    {% endif %}
                 }
 
             },
         {% endfor %}
     ];
     function putPost(post) {
+        if (post.meta.math) {
+            (function() {
+                var m = document.createElement('script');
+                m.src = 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(m, s);
+            })();
+        }
         var $postTitle = $('<h2 class="post-title"><a href="' + post.url + '">' + post.title + '</a></h2>');
         var tags = post.meta.tags.reduce(function(p, c) {
             return p + '<a class="tag" href="' + c.url + '">' + c.tag + '</a> ';
@@ -63,13 +76,15 @@ tagline: 天外有天，山外有山
         var spand = $('<span></span>').html('<i class="fa fa-calendar"></i> ' + post.meta.date);
         var spant = $('<span></span>').html('<i class="fa fa-tags"></i> ' + tags);
         var $meta = $('<div class="post-meta"></div>').append(spand).append(spant);
-        
         var $postHeader = $('<header class="post-header"></header>').append($postTitle).append($meta);
         var $postContent = $('<div class="post-content"></div>');
         var $post = $('<section class="post-glance"></section>').append($postHeader).append($postContent);
         var $postExtra = $('<div class="post-extra"></div>').append($('<a href="' + post.url + '#ds-comment">添加/查看评论</a>'));
         $('.posts').append($post).append($postExtra);
-        $postContent.load(post.url + ' ' + '.post-content', function() {
+
+        $postContent.load(post.url + ' ' + '.post-content', function(res) {
+            var children = $(res).find('.post-content').children();
+            $postContent.html('').append(children);
             prettyPrintCode();
         });
     }
