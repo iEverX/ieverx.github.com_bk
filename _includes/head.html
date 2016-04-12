@@ -17,11 +17,11 @@
         <script src="//cdn.bootcss.com/prettify/r298/prettify.min.js"></script>
         {% if page.role == 'index' %}
             {% for lang in site.posts[0].lang %}
-                <script src="//cdn.bootcss.com/prettify/r298/lang-{{ lang }}.min.js"></script>
+                <script src="{{ site.baseurl }}/static/lib/google-code-prettify/lang/lang-{{ lang }}.js"></script>
             {% endfor %}
         {% endif %}
         {% for lang in page.lang %}
-            <script src="//cdn.bootcss.com/prettify/r298/lang-{{ lang }}.min.js"></script>
+            <script src="{{ site.baseurl }}/static/lib/google-code-prettify/lang/lang-{{ lang }}.js"></script>
         {% endfor %}
 
     {% else %}
