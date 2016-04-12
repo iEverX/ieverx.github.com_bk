@@ -13,6 +13,10 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
+ 
+html {
+    overflow-x: hidden;
+} 
 body {
     font-family: $base-font-family;
     font-size: $base-font-size;
@@ -21,6 +25,7 @@ body {
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
 }
 
 
