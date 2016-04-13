@@ -21,6 +21,7 @@ feed_path: /feed.xml
 markdown: kramdown
 kramdown:
   input: GFM
+  syntax_highlighter: none
 
 service:
   duoshuo: 
