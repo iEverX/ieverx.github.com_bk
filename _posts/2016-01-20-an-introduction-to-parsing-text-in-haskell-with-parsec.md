@@ -102,7 +102,7 @@ Parsec提供了规则来完成上面的目的，比如，`Parsec.anyChar`会消�
 ghci> parse Parsec.anyChar "blahblah"
 Right 'b'
 ghci> parse Parsec.anyChar "=-symbols..."
-Right "="
+Right '='
 ```
 
 规则`Parsec.letter`会消费任意字母，`Parsec.lower`会消费小写字母，`Parsec.digit`会消费数字，`Parsec.alphaNum`则是字母和数字。所有这些可以通过`Parsec.oneOf`来手动构建，不过这些提供了更好的错误提示信息（也可以在自己的规则里添加，我们稍后会看到）。
@@ -125,18 +125,18 @@ unexpected "1"
 
 ```haskell
 ghci> parse (Parsec.many (Parsec.char 'h')) "hhhheeelllooo!"
-Right 'hhhh'
+Right "hhhh"
 ghci> parse (Parsec.many (Parsec.char 'e')) "hhhheeelllooo!"
-Right ''
+Right ""
 ghci> parse (Parsec.many Parsec.letter) "hhhheeelllooo!"
-Right 'hhhheeelllooo'
+Right "hhhheeelllooo"
 ```
 
 就像我们看到的，`Parsec.many`从来不会出错，它总是开心的匹配提供的规则0次，然后什么也不返回。它会尽量往前尝试，并且返回他匹配的任何东西。`Parsec.many1`类似，除了所给的规则至少匹配一次：
 
 ```haskell
 ghci> parse (Parsec.many1 Parsec.letter) "hello!!"
-Right 'hello'
+Right "hello"
 ghci> parse (Parsec.many1 Parsec.letter) "75 hello's!"
 Left "(source)" (line 1, column 1):
 unexpected "7"
