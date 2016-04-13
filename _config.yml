@@ -19,9 +19,10 @@ tags_path: /tags.html
 feed_path: /feed.xml
 
 markdown: kramdown
+# highlighter: rouge
 kramdown:
   input: GFM
-  syntax_highlighter: none
+  syntax_highlighter: rouge
 
 service:
   duoshuo: 

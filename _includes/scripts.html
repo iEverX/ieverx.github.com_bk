@@ -3,11 +3,11 @@
     if (now_year != {{ site.start_year }}) {
         $('#now_year').html('- ' + now_year);
     }
-    function prettyPrintCode() {
-        // $('pre').addClass('prettyprint linenums').css('overflow-x', 'auto');
-        $('pre').addClass('prettyprint').css('overflow-x', 'auto');
-        window.prettyPrint && prettyPrint();
-    }
+    // function prettyPrintCode() {
+    //     // $('pre').addClass('prettyprint linenums').css('overflow-x', 'auto');
+    //     $('pre').addClass('prettyprint').css('overflow-x', 'auto');
+    //     window.prettyPrint && prettyPrint();
+    // }
     $(function() {
         $('#toggle-nav').hide();
         $('#menu-btn').click(function() {

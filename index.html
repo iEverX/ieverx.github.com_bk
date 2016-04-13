@@ -68,20 +68,14 @@ role: index
         {% endfor %}
     ];
     function putPost(post) {
-        (function() {
-            function lazyLoad(url) {
+        if (post.meta.math) {
+            (function() {
                 var m = document.createElement('script');
-                m.src = url;
+                m.src = '//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
                 var s = document.getElementsByTagName("script")[0]; 
                 s.parentNode.insertBefore(m, s);
-            }
-            if (post.meta.math) {
-                lazyLoad('//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML');
-            }
-            for (var i in post.meta.lang) {
-                lazyLoad('{{ site.baseurl }}/static/lib/google-code-prettify/lang/lang-' + post.meta.lang[i] + '.js')
-            }
-        })();
+            })();
+        }
         var $postTitle = $('<h2 class="post-title"><a href="' + post.url + '">' + post.title + '</a></h2>');
         var tags = post.meta.tags.reduce(function(p, c) {
             return p + '<a class="tag" href="' + c.url + '">' + c.tag + '</a> ';
@@ -99,7 +93,6 @@ role: index
         $postContent.load(post.url + ' ' + '.post-content', function(res) {
             var children = $(res).find('.post-content').children();
             $postContent.html('').append(children);
-            prettyPrintCode();
         });
     }
     $(function() {
