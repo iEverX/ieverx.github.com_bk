@@ -335,7 +335,7 @@ a {
     }
 
     #menu-btn {
-        float: right;
+        position: absolute;
 
         & > .brand-title {
             float: left;
@@ -343,8 +343,7 @@ a {
         }
 
         & > i {
-            float: right;
-            margin-top: 3px;
+            margin-top: 8px;
             cursor: pointer;
         }
 
