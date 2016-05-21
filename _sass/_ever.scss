@@ -41,6 +41,7 @@ a {
 
 .nav {
     & > ul {
+        margin-left: 0;
         & > li {
             
             display: inline-block;
@@ -381,16 +382,22 @@ a {
 }
 
 code {
-    color: darken($siteColor, 5);
+    // color: darken($siteColor, 5);
     padding: 0 3px 0 3px;
     font-family: $codeFont;
     font-style: italic;
+    font-weight: 500;
 }
 
 pre {
     font-family: $codeFont;
     padding: 0 .5rem;
+    white-space: pre;
+    word-wrap: normal;
+    overflow-x: auto;
+
     code {
+        // color: #333;
         font-weight: normal;
         padding: 0;
         font-style: normal;

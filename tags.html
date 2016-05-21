@@ -3,7 +3,6 @@ layout: page
 title: Tags
 header: Posts By Tag
 group: no-navigation
-theme: pure
 ---
 
 <svg class="cloud" style="width:100%;height:50vh;">
@@ -33,7 +32,6 @@ theme: pure
             },
         {% endfor %}
     ];
-
     var minSize = 24, maxSize = 48;
     var minFreq = 1;
     var maxFreq = tags.reduce(function(memo, tag) {
@@ -41,9 +39,8 @@ theme: pure
             memo = tag.freq;
         }
         return memo;
-    }).freq;
+    }, 0);
     var width = $('.cloud').width(), height = $('.cloud').height();
-    console.log(width, height);
     var fill = d3.scale.category10();
 
     function scale(freq, minFreq, maxFreq, minSize, maxSize) {
@@ -65,9 +62,14 @@ theme: pure
             $('.tag_posts').empty().append($('<div class="tag_title">' + tagContent + '</div>')).append($ul).slideDown('normal');
         });
     }
-
+    
+    if (location.hash != '') {
+        showPosts(location.hash.substring(1));
+    }
+    
     function draw(words) {
         d3.select('.cloud g')
+            .attr('transform', 'translate(' + [width / 2, height / 2] + ')')
             .selectAll('text')
             .data(words)
             .enter()
@@ -84,11 +86,12 @@ theme: pure
             .style('font-family', 'Microsoft YaHei')
             .style('cursor', 'pointer')
             .text(function(d) {
-                console.log(d.text, d.x, d.y, '.cloud g');
                 return d.text;
             })
-            .attr('x', 0)
-            .attr('y', 0)
+            .attr("text-anchor", "middle")
+            .attr("transform", function(d) {
+                return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+            })
             .on('mouseover', function(d) {
                 d3.select(this).style('opacity', '0.5');
             })
@@ -98,41 +101,29 @@ theme: pure
             .on('click', function(d) {
                 showPosts(d.text);
             });
-        d3.selectAll('.cloud g text')
-            .attr('transform', 'rotate(0)')
-            .transition()
-            .attr('transform', function(d) {
-                console.log(d.text, d.x, d.y);
-                return 'translate(' + [d.x, d.y] + ')rotate(' + d.rotate + ')';
-            });
-        d3.select('.cloud g')
-            .attr('transform', 'rotate(0)')
-            .transition()
-            .attr('transform', 'translate(' + [width * 0.4, height / 2] + ')');
     }
-
-    d3.layout.cloud()
+    
+    var layout = d3.layout.cloud()
         .size([width, height])
         .words(tags.map(function(d) {
-            console.log('map', d.tag);
             return {
                 text: d.tag,
-                freq: d.freq
+                size: scale(d.freq, minFreq, maxFreq, minSize, maxSize)
             };
+        }).sort(function(a, b) {
+            return b.size - a.size;
         }))
-        .padding(5)
+        .padding(1)
         .rotate(function() {
-            return 0;
+            return ~~(Math.random() * 3 - 1) * 30;
         })
-        .font('Microsoft YaHei')
+        .spiral('archimedean')
+        .font('Microsoft Yahei')
         .fontSize(function(d) {
-            return scale(d.freq, minFreq, maxFreq, minSize, maxSize);
+            return d.size;
         })
-        .on('end', draw)
-        .start();
-
-    if (location.hash != '') {
-        showPosts(location.hash.substring(1));
-    }
-
+        .on('end', draw);
+        
+    layout.start();
+    
 </script>

@@ -54,6 +54,14 @@ role: index
                     ,
                     math: true
                     {% endif %}
+                    {% if post.lang %}
+                    ,
+                    lang: [
+                        {% for lang in post.lang %}
+                            '{{ lang }}',
+                        {% endfor %}
+                    ]
+                    {% endif %}
                 }
 
             },
@@ -85,7 +93,6 @@ role: index
         $postContent.load(post.url + ' ' + '.post-content', function(res) {
             var children = $(res).find('.post-content').children();
             $postContent.html('').append(children);
-            prettyPrintCode();
         });
     }
     $(function() {
