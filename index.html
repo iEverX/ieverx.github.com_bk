@@ -96,18 +96,38 @@ role: index
         });
     }
     $(function() {
+        var c = +new Date();
         function checkAndAdd() {
             if ($(window).scrollTop() + $(window).height() > $(document).height() - 50 && posts.length > 0) {
                 var post = posts.shift();
                 putPost(post);
             }
         }
+        
+        function throttle(func, wait) {
+            var timeout = null;
+            var previous = 0;
+            
+            return function() {
+                var now = +new Date();
+                var remaining = wait - (now - previous);
+                if (remaining <= 0) {
+                    clearTimeout(timeout);
+                    timeout = null;
+                    previous = now;
+                    func();
+                } else if (!timeout) {
+                    timeout = setTimeout(function() {
+                       previous = now;
+                       timeout = null;
+                       func();
+                    }, remaining);
+                }
+            }
+        }
+        
         checkAndAdd();
-        $(window).scroll(function() {
-            checkAndAdd();
-        });
-        $(window).resize(function() {
-            checkAndAdd();
-        })
+        $(window).scroll(throttle(checkAndAdd, 100));
+        $(window).resize(throttle(checkAndAdd, 100));
     });
 </script>
