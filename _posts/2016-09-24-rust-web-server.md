@@ -49,6 +49,7 @@ other-header: xxx
 body
 ````
 这个服务器目前只能处理GET和HEAD请求，并且只能处理静态文件，所有很多东西并没有做。比如querystring的解析、请求体的解析等等。各种header也只是解析，并没有真的使用。之后会慢慢完善，函数重点是
+
 ```rust
 fn parse(stream: &mut TcpStream) -> Option<Request> {
     let mut s = Vec::new();
@@ -61,11 +62,13 @@ fn parse(stream: &mut TcpStream) -> Option<Request> {
     }
 }
 ```
+
 如果解析失败，返回一个`None`，这是`Request`结构的一个静态方法。解析成功则打印日志，并根据请求构造响应。
 
 ### 构造响应
 
 响应的的格式为
+
 ````
 VERSION CODE PHRASE
 header: xxx
@@ -77,12 +80,14 @@ body
 由于只能处理静态请求，实际上这里就是读取文件并.对于`HEAD`请求，只计算长度，没有响应体部分。
 
 目前的相应的结构为
+
 ```rust
 struct Response {
     head: String,
     body: String
 }
 ```
+
 通过code、mime、content等拼接字符串，得到响应头部以及响应体。最后通过`TcpStream`发送出去。
 
 至此，这个web服务器就算是完成了。
