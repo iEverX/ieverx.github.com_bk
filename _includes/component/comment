@@ -1,0 +1,7 @@
+{% if jekyll.environment == 'production' %}
+  {% if site.service.comment == 'duoshuo' %}
+    {% include component/duoshuo %}
+  {% elsif site.service.comment == 'disqus' %}
+    {% include component/disqus %}
+  {% endif %}
+{% endif %}

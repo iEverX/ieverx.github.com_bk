@@ -25,6 +25,9 @@ kramdown:
   syntax_highlighter: rouge
 
 service:
+  comment: disqus
+  disqus:
+    short_name: evercoding
   duoshuo: 
     short_name: evercoding
   google:
