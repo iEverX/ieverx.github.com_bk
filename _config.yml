@@ -25,7 +25,7 @@ kramdown:
   syntax_highlighter: rouge
 
 service:
-  comment: duoshou
+  comment: duoshuo
   disqus:
     short_name: evercoding
   duoshuo: 
