@@ -1,5 +1,6 @@
-{% if site.service.comment == 'duoshuo' %}
+{% case site.service.comment %}
+{% when 'duoshuo' %}
   {% include component/duoshuo %}
-{% elsif site.service.comment == 'disqus' %}
+{% when 'disqus' %}
   {% include component/disqus %}
-{% endif %}
+{% endcase %}
