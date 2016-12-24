@@ -241,7 +241,7 @@ mySeparator = do
 mySeparator = Parsec.spaces >> Parsec.char ',' >> Parsec.spaces
 ```
 
-现在有了`myParser`和`myPeparator`，每个都是由更小的规则构成的。用同样的方式，我们可以把新的规则组成更大的规则。还是根据上面学到的，来构建一个更冗长的规则：
+现在有了`myParser`和`mySeparator`，每个都是由更小的规则构成的。用同样的方式，我们可以把新的规则组成更大的规则。还是根据上面学到的，来构建一个更冗长的规则：
 
 ```haskell
 --I want to return a list of pairs, this time.
