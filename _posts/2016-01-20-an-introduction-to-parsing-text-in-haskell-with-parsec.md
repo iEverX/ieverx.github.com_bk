@@ -618,7 +618,7 @@ S.execState (Parsec.runParserT (Parsec.many hCountParser2) () "" "hhhhhhhhhhhhel
 
 我建议在ghci下，通过别名引入`Parsec`模块（或者qualified引入）并且使用tab键来获得`Parsec`提供的所有东西，详细考察`Parsec`的函数。对这些函数使用`:type`，会让你对其有更深的理解，同样也是我探索这么多的函数的基础。*Real World Haskell*的这一章（[英文版][]，[中文版][]）也是非常好的教程，并且有更为大量的实际例子，虽然其中的一小部分已经过时了。
 
-我希望这篇文章能给你提供帮助。如果我漏掉了什么,请留下你的评论,让我知道! 
+我希望这篇文章能给你提供帮助。如果我漏掉了什么，请留下你的评论，让我知道！
 
 [这个文件]: https://jsdw.github.io/unbuilt-posts/haskell-parsec-basics/examples.hs
 [英文版]: http://book.realworldhaskell.org/read/using-parsec.html
