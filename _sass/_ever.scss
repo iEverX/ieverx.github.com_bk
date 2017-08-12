@@ -1,6 +1,4 @@
-$fontFamily: Georgia, Cambria, "Microsoft YaHei", "Hiragino Sans GB",
-             "WenQuanYi Micro Hei", sans-serif;
-// $fontFamily: Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+$fontFamily: Helvetica, Arial, "PingFang SC", "Noto Sans", Roboto, "Microsoft Yahei", sans-serif;
 $codeFont: consolas, 'Source Code Pro', monaco, monospace;
 
 * {
@@ -381,10 +379,9 @@ a {
 }
 
 code {
-    // color: darken($siteColor, 5);
+    color: darken($siteColor, 20);
     padding: 0 3px 0 3px;
     font-family: $codeFont;
-    font-style: italic;
     font-weight: 500;
 }
 
