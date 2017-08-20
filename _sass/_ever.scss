@@ -177,6 +177,11 @@ a {
             content: "### ";
             color: $titleColor;
         }
+
+        h2 code, h3 code, h4 code {
+            background: none;
+            border-radius: 0;
+        }
     }
 }
 
@@ -383,6 +388,8 @@ code {
     padding: 0 3px 0 3px;
     font-family: $codeFont;
     font-weight: 500;
+    background-color: lighten($siteColor, 50);
+    border-radius: 3px;
 }
 
 pre {
@@ -397,6 +404,7 @@ pre {
         font-weight: normal;
         padding: 0;
         font-style: normal;
+        background: none;
     }
 }
 
