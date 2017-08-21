@@ -122,8 +122,17 @@ Java的内存模型之前看过，但是并不是非常清楚。这次前后查�
 并且还有个问题并没有搞清楚，Java8的规范里，哪条规则能够明确的推导出Java6关于lock的规则。
 这个就慢慢再看吧
 
+## Updated
+
+原贴下有贴出了[一个连接][]，感觉说得刚靠谱。JVM虚拟机做了优化，会尽可能的保障工作内存与主内存的同步。
+这样就解释了`synchronized`和`sleep`时，线程能够获取到最新变量。
+
+想想还是太naive了，还是要多学多看啊
+
+
 [一个问题]: https://www.v2ex.com/t/384263
 [JSR 133 FAQ]: https://www.cs.umd.edu/~pugh/java/memoryModel/jsr-133-faq.html#synchronization
 [提问]: https://stackoverflow.com/questions/1850270/memory-effects-of-synchronization-in-java
 [JLS17.1]: http://docs.oracle.com/javase/specs/jls/se8/html/jls-17.html#jls-17.1
 [jvm6]: https://docs.oracle.com/javase/specs/jvms/se6/html/Threads.doc.html
+[一个链接]: http://www.cnblogs.com/cookiezhi/p/5774583.html

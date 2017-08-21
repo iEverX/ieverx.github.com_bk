@@ -384,11 +384,11 @@ a {
 }
 
 code {
-    color: darken($siteColor, 20);
     padding: 0 3px 0 3px;
+    margin: 0 2px 0 2px;
     font-family: $codeFont;
     font-weight: 500;
-    background-color: lighten($siteColor, 50);
+    background-color: #f1f1f1;
     border-radius: 3px;
 }
 
